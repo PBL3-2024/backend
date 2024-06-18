@@ -1,0 +1,8 @@
+name: do-sample-app
+services:
+  - dockerfile_path: Dockerfile
+    github:
+      branch: main
+      deploy_on_push: false
+      repo: PBL3-2024/backend
+    name: backend
