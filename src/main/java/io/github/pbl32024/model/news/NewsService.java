@@ -1,18 +1,22 @@
 package io.github.pbl32024.model.news;
 
 import io.github.pbl32024.model.occupation.OccupationService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class NewsService {
 
-	private NewsDAO newsDAO;
+	private final NewsDAO newsDAO;
 
-	private OccupationService occupationService;
+	private final OccupationService occupationService;
 
-	private RSSClient rSSClient;
+	private final RSSClient rSSClient;
 
-	private RSSProperties rSSProperties;
+	private final RSSProperties rSSProperties;
 
 	public List<News> getNews(NewsQuery query) {
 		return null;

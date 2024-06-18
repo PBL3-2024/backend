@@ -1,5 +1,10 @@
 package io.github.pbl32024.model.analytics;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
 public class AnalyticsDAO {
 
 	public Chart getUserCurrentOccupationPieChart(AnalyticsQuery query) {

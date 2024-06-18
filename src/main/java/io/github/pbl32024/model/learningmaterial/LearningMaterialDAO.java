@@ -1,8 +1,13 @@
 package io.github.pbl32024.model.learningmaterial;
 
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
+@RequiredArgsConstructor
 public class LearningMaterialDAO {
 
 	public List<LearningMaterial> getBySoc(String socCode) {

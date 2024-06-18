@@ -1,8 +1,13 @@
 package io.github.pbl32024.model.analytics;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
 public class AnalyticsService {
 
-	private AnalyticsDAO analyticsDAO;
+	private final AnalyticsDAO analyticsDAO;
 
 	public Report getUserCurrentOccupationReport(AnalyticsQuery query) {
 		return null;

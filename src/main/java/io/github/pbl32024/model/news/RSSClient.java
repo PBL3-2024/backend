@@ -1,8 +1,9 @@
 package io.github.pbl32024.model.news;
 
-public class RSSClient {
+import org.springframework.stereotype.Component;
 
-	private RSSFeed rSSFeed;
+@Component
+public class RSSClient {
 
 	public RSSFeed fetchRssFeed(RSSSource source) {
 		return null;

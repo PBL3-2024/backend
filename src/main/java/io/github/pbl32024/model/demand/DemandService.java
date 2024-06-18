@@ -1,9 +1,14 @@
 package io.github.pbl32024.model.demand;
 
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
 public class DemandService {
 
-	private DemandDAO demandDAO;
+	private final DemandDAO demandDAO;
 
 	public Demand getDemand(String socCode) {
 		return null;

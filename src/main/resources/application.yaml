@@ -1,5 +1,7 @@
-spring.application.name=server
+spring.application.name: server
 
 backend:
+  certifications:
+    cron: '1 */5 * * * *'
   occupation:
     soc-definitions: classpath:/soc_2018_definitions.csv

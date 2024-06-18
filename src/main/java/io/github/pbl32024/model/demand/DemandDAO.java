@@ -1,6 +1,11 @@
 package io.github.pbl32024.model.demand;
 
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
 public class DemandDAO {
 
 	public Demand getDemand(String socCode) {

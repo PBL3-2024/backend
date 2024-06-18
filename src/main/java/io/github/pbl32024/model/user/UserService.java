@@ -1,11 +1,16 @@
 package io.github.pbl32024.model.user;
 
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
 public class UserService {
 
-	private Auth0Client auth0Client;
+	private final Auth0Client auth0Client;
 
-	private ProfileDAO profileDAO;
+	private final ProfileDAO profileDAO;
 
 	public Profile updateUserProfile(Profile userProfile) {
 		return null;

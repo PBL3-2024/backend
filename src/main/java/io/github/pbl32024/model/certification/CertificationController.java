@@ -1,13 +1,22 @@
 package io.github.pbl32024.model.certification;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/certifications")
 public class CertificationController {
 
-	private CertificationService certificationService;
+	private final CertificationService certificationService;
 
-	public CertificationResponse getCertifications(CertificationQuery query, SpringDataWebProperties.Sort sort) {
+	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+	public CertificationResponse getCertifications(CertificationQuery query) {
 		return null;
 	}
 

@@ -1,17 +1,32 @@
 package io.github.pbl32024.model.user;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/profile")
 public class UserController {
 
-	private UserService userService;
+	private final UserService userService;
 
-	public Profile updateUserProfile(Profile userProfile) {
+	@PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Profile updateUserProfile(@RequestBody Profile userProfile) {
 		return null;
 	}
 
+	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Profile getCurrentUserProfile() {
 		return null;
 	}
 
+	@DeleteMapping(path = "/")
 	public void deleteCurrentUserProfile() {
 
 	}

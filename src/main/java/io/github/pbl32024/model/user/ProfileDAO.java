@@ -1,6 +1,9 @@
 package io.github.pbl32024.model.user;
 
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ProfileDAO {
 
 	public void save(Profile userProfile) {

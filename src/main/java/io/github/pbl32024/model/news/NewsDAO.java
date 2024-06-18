@@ -1,8 +1,13 @@
 package io.github.pbl32024.model.news;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Component
+@RequiredArgsConstructor
 public class NewsDAO {
 
 	public List<News> getBySocCodeAndSource(String socCode, String source, LocalDateTime before, LocalDateTime after) {
