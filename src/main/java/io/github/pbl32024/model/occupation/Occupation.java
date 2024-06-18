@@ -1,12 +1,15 @@
 package io.github.pbl32024.model.occupation;
 
 
+import lombok.Data;
+
+@Data
 public class Occupation {
 
-	public String socCode;
+	private String socCode;
 
-	public String title;
+	private String title;
 
-	public String description;
+	private String description;
 
 }
