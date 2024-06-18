@@ -11,6 +11,6 @@ public class BLSSeriesRequest {
 
 	private String endyear;
 
-	private List<String> seriesId;
+	private List<String> seriesid;
 
 }

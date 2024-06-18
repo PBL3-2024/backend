@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class BLSSeriesResponseResultSeries {
 
-	private String seriesId;
+	private String seriesID;
 
 	private List<BLSSeriesResponseResultSeriesData> data;
 

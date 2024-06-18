@@ -16,7 +16,9 @@ public class UnemploymentController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public UnemploymentResponse getUnemploymentBySocCode(String socCode) {
-		return null;
+		UnemploymentResponse unemploymentResponse = new UnemploymentResponse();
+		unemploymentResponse.setUnemployment(unemploymentService.getUnemploymentBySocCode(socCode));
+		return unemploymentResponse;
 	}
 
 }

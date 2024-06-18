@@ -5,3 +5,6 @@ backend:
     cron: '1 */5 * * * *'
   occupation:
     soc-definitions: classpath:/soc_2018_definitions.csv
+  unemployment:
+    bls-url: https://api.bls.gov/publicAPI
+    cron: '0 0 0 * * *'

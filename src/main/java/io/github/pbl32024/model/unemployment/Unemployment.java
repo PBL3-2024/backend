@@ -13,6 +13,6 @@ public class Unemployment {
 
 	private LocalDateTime date;
 
-	private long value;
+	private String value;
 
 }
