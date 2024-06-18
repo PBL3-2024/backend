@@ -5,7 +5,7 @@ COPY . /workspace/app
 
 RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests -P production
 ARG JAR_FILE=target/*.jar
-RUN java -Djarmode=tools -jar ${JAR_FILE} extract --layers --destination target/extracted
+RUN java -Djarmode=layertools -jar ${JAR_FILE} extract --destination target/extracted
 
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /application
@@ -16,4 +16,4 @@ COPY --from=build ${EXTRACTED}/snapshot-dependencies/ ./
 COPY --from=build ${EXTRACTED}/application/ ./
 RUN addgroup -S demo && adduser -S demo -G demo
 USER demo
-ENTRYPOINT ["java","-jar","*.jar"]
+ENTRYPOINT ["java","org.springframework.boot.loader.JarLauncher"]
