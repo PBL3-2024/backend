@@ -1,14 +1,16 @@
 package io.github.pbl32024.model.jobposting.usajobs;
 
+import lombok.Data;
 
+@Data
 public class PositionRenumeration {
 
-	public float minimumRange;
+	private float minimumRange;
 
-	public float maximumRange;
+	private float maximumRange;
 
-	public String rateIntervalCode;
+	private String rateIntervalCode;
 
-	public String description;
+	private String description;
 
 }

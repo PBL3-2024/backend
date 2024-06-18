@@ -1,16 +1,19 @@
 package io.github.pbl32024.model.analytics;
 
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class LineChart extends Chart {
 
-	public String type;
+	private String type;
 
-	public List<Tuple> data;
+	private List<Tuple> data;
 
-	public String xAxisLabel;
+	private String xAxisLabel;
 
-	public String yAxisLabel;
+	private String yAxisLabel;
 
 }

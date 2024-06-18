@@ -1,19 +1,23 @@
 package io.github.pbl32024.model.certification;
 
 import io.github.pbl32024.model.ExternalLink;
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class Certification {
 
-	public String id;
+	private String id;
 
-	public String[] socCode;
+	private List<String> socCode;
 
-	public String title;
+	private String title;
 
-	public String description;
+	private String description;
 
-	public String organization;
+	private String organization;
 
-	private ExternalLink[] externalLink;
+	private List<ExternalLink> externalLinks;
 
 }

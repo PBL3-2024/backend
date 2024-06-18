@@ -1,12 +1,14 @@
 package io.github.pbl32024.model.unemployment;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class BLSSeriesResponse {
 
-	public String status;
+	private String status;
 
-	private BLSSeriesResponseResultSeries bLSSeriesResponseResultSeries;
-
-	private BLSSeriesResponseResult bLSSeriesResponseResult;
+	@JsonProperty("Results")
+	private BLSSeriesResponseResult results;
 
 }

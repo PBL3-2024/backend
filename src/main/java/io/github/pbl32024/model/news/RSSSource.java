@@ -1,10 +1,13 @@
 package io.github.pbl32024.model.news;
 
 
+import lombok.Data;
+
+@Data
 public class RSSSource {
 
-	public String id;
+	private String id;
 
-	public String url;
+	private String url;
 
 }

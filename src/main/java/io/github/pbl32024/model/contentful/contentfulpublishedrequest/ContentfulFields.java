@@ -1,14 +1,18 @@
 package io.github.pbl32024.model.contentful.contentfulpublishedrequest;
 
 import io.github.pbl32024.model.ExternalLink;
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class ContentfulFields {
 
-	public String title;
+	private String title;
 
-	public String socCodes;
+	private String socCodes;
 
-	public ExternalLink externalLinks;
+	private List<ExternalLink> externalLinks;
 
 	private ContentfulDescription contentfulDescription;
 

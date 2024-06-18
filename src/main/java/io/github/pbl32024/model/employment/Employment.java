@@ -1,16 +1,20 @@
 package io.github.pbl32024.model.employment;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
+
+@Data
 public class Employment {
 
-	public long id;
+	private String id;
 
-	public String socCode;
+	private String socCode;
 
-	public LocalDateTime date;
+	private LocalDateTime date;
 
-	public long value;
+	private long value;
 
-	public boolean forecasted;
+	private boolean forecasted;
 
 }

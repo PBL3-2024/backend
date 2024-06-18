@@ -1,10 +1,15 @@
 package io.github.pbl32024.model.unemployment;
 
 
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class BLSSeriesResponseResultSeries {
 
-	public String seriesId;
+	private String seriesId;
 
-	private BLSSeriesResponseResultSeriesData[] bLSSeriesResponseResultSeriesData;
+	private List<BLSSeriesResponseResultSeriesData> data;
 
 }

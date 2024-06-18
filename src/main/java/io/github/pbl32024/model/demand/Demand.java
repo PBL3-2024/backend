@@ -1,10 +1,12 @@
 package io.github.pbl32024.model.demand;
 
+import lombok.Data;
 
+@Data
 public class Demand {
 
-	public String socCode;
+	private String socCode;
 
-	public long value;
+	private long value;
 
 }

@@ -1,16 +1,18 @@
 package io.github.pbl32024.model.employment;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+@Data
 @Configuration
 @ConfigurationProperties("backend.forecasting")
 public class ForecastingProperties {
 
-	public double arimaP;
+	private double arimaP;
 
-	public double arimaD;
+	private double arimaD;
 
-	public double arimaQ;
+	private double arimaQ;
 
 }

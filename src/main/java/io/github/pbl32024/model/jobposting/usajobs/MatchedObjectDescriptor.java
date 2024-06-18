@@ -1,30 +1,35 @@
 package io.github.pbl32024.model.jobposting.usajobs;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
+import java.util.List;
+
+@Data
 public class MatchedObjectDescriptor {
 
-	public String positionId;
+	private String positionId;
 
-	public String positionTitle;
+	private String positionTitle;
 
-	public String positionLocationDisplay;
+	private String positionLocationDisplay;
 
-	public String organizationName;
+	private String organizationName;
 
-	public LocalDateTime positionStartDate;
+	private LocalDateTime positionStartDate;
 
-	public LocalDateTime positionEndDate;
+	private LocalDateTime positionEndDate;
 
-	public LocalDateTime publicationStartDate;
+	private LocalDateTime publicationStartDate;
 
-	public LocalDateTime publicationEndDate;
+	private LocalDateTime publicationEndDate;
 
-	public String positionUrl;
+	private String positionUrl;
 
-	private PositionLocation[] positionLocation;
+	private List<PositionLocation> positionLocation;
 
 	private UserArea userArea;
 
-	private PositionRenumeration[] positionRenumeration;
+	private List<PositionRenumeration> positionRenumeration;
 
 }

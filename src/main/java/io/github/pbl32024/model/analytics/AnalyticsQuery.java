@@ -1,14 +1,17 @@
 package io.github.pbl32024.model.analytics;
 
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class AnalyticsQuery {
 
-	public LocalDateTime start;
+	private LocalDateTime start;
 
-	public LocalDateTime end;
+	private LocalDateTime end;
 
-	public String socCode;
+	private String socCode;
 
 }

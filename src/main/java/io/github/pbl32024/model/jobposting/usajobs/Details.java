@@ -1,20 +1,24 @@
 package io.github.pbl32024.model.jobposting.usajobs;
 
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class Details {
 
-	public String jobSummary;
+	private String jobSummary;
 
-	public String lowGrade;
+	private String lowGrade;
 
-	public String highGrade;
+	private String highGrade;
 
-	public String totalOpenings;
+	private String totalOpenings;
 
-	public String[] majorDuties;
+	private List<String> majorDuties;
 
-	public String education;
+	private String education;
 
-	public String requirement;
+	private String requirement;
 
 }

@@ -1,20 +1,22 @@
 package io.github.pbl32024.model.user;
 
+import lombok.Data;
 
+@Data
 public class Profile {
 
-	public String id;
+	private String id;
 
-	public String name;
+	private String name;
 
-	public String email;
+	private String email;
 
-	public String postalCode;
+	private String postalCode;
 
-	public String currentSocCode;
+	private String currentSocCode;
 
-	public int goalSocCode;
+	private String goalSocCode;
 
-	public boolean termsOfUseConsent;
+	private boolean termsOfUseConsent;
 
 }

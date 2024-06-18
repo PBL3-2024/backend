@@ -1,13 +1,12 @@
 package io.github.pbl32024.model.contentful.contentfulunpublishedrequest;
 
+import lombok.Data;
 
+@Data
 public class ContentfulSys {
 
-	public String id;
+	private String id;
 
-	public String type;
-
-	private ContentfulUnpublishedRequest contentfulUnpublishedRequest;
-
+	private String type;
 
 }

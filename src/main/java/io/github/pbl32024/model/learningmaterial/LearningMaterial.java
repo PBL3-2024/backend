@@ -1,21 +1,25 @@
 package io.github.pbl32024.model.learningmaterial;
 
 import io.github.pbl32024.model.ExternalLink;
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class LearningMaterial {
 
-	public String id;
+	private String id;
 
-	public String title;
+	private String title;
 
-	public String description;
+	private String description;
 
-	public String[] socCode;
+	private List<String> socCode;
 
-	public String organization;
+	private String organization;
 
 	private LearningContentType learningContentType;
 
-	private ExternalLink[] externalLink;
+	private List<ExternalLink> externalLink;
 
 }

@@ -1,18 +1,21 @@
 package io.github.pbl32024.model.news;
 
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class RSSArticle {
 
-	public String title;
+	private String title;
 
-	public String description;
+	private String description;
 
-	public String link;
+	private String link;
 
-	public String pubDate;
+	private String pubDate;
 
-	public List<String> category;
+	private List<String> category;
 
 }

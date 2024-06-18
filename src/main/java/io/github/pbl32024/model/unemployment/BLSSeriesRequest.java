@@ -1,12 +1,16 @@
 package io.github.pbl32024.model.unemployment;
 
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class BLSSeriesRequest {
 
-	public String startyear;
+	private String startyear;
 
-	public String endyear;
+	private String endyear;
 
-	public String[] seriesId;
+	private List<String> seriesId;
 
 }

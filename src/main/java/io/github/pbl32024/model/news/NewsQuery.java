@@ -1,16 +1,19 @@
 package io.github.pbl32024.model.news;
 
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class NewsQuery {
 
-	public String socCode;
+	private String socCode;
 
-	public String source;
+	private String source;
 
-	public LocalDateTime after;
+	private LocalDateTime after;
 
-	public LocalDateTime before;
+	private LocalDateTime before;
 
 }

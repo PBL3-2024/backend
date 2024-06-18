@@ -1,7 +1,12 @@
 package io.github.pbl32024.model.unemployment;
 
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class UnemploymentResponse {
 
-	private Unemployment[] unemployment;
+	private List<Unemployment> unemployment;
 
 }

@@ -1,20 +1,23 @@
 package io.github.pbl32024.model.analytics;
 
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class ClickDataQuery {
 
-	public LocalDateTime start;
+	private LocalDateTime start;
 
-	public LocalDateTime end;
+	private LocalDateTime end;
 
-	public String userPostalCode;
+	private String userPostalCode;
 
-	public String userCurrentOccupation;
+	private String userCurrentOccupation;
 
-	public String userGoalOccupation;
+	private String userGoalOccupation;
 
-	public String elementType;
+	private String elementType;
 
 }

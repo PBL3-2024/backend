@@ -1,16 +1,12 @@
 package io.github.pbl32024.model.analytics;
 
+import lombok.Data;
 
-public class Chart {
+@Data
+public abstract class Chart {
 
-	public String title;
+	private String title;
 
-	public int width;
-
-	public int height;
-
-	public String getType() {
-		return null;
-	}
+	public abstract String getType();
 
 }

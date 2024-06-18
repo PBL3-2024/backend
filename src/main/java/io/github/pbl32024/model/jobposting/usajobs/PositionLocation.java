@@ -1,14 +1,16 @@
 package io.github.pbl32024.model.jobposting.usajobs;
 
+import lombok.Data;
 
+@Data
 public class PositionLocation {
 
-	public String locationName;
+	private String locationName;
 
-	public String countryCode;
+	private String countryCode;
 
-	public String countrySubDivisionCode;
+	private String countrySubDivisionCode;
 
-	public String cityName;
+	private String cityName;
 
 }

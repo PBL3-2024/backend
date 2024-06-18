@@ -1,20 +1,21 @@
 package io.github.pbl32024.model.analytics;
 
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class BarChart extends Chart {
 
-	public String type;
+	private String type;
 
-	public List<Tuple> data;
+	private List<Tuple> data;
 
-	public String xAxisLabel;
+	private String xAxisLabel;
 
-	public String yAxisLabel;
+	private String yAxisLabel;
 
-	public String markerType;
-
-	private Chart chart;
+	private String markerType;
 
 }

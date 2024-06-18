@@ -1,22 +1,24 @@
 package io.github.pbl32024.model.jobposting;
 
 import io.github.pbl32024.model.ExternalLink;
+import lombok.Data;
 
+@Data
 public class JobPosting {
 
-	public String id;
+	private String id;
 
-	public String title;
+	private String title;
 
-	public String description;
+	private String description;
 
-	public String company;
+	private String company;
 
-	public String salaryRange;
+	private String salaryRange;
 
-	public String location;
+	private String location;
 
-	public String deadline;
+	private String deadline;
 
 	private ExternalLink externalLink;
 

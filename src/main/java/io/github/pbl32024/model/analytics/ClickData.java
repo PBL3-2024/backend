@@ -1,20 +1,22 @@
 package io.github.pbl32024.model.analytics;
 
+import lombok.Data;
 
+@Data
 public class ClickData {
 
-	public long timestamp;
+	private long timestamp;
 
-	public String elementId;
+	private String elementId;
 
-	public String elementType;
+	private String elementType;
 
-	public String userId;
+	private String userId;
 
-	public String userPostalCode;
+	private String userPostalCode;
 
-	public String userCurrentOccupation;
+	private String userCurrentOccupation;
 
-	public String userGoalOccupation;
+	private String userGoalOccupation;
 
 }

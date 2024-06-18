@@ -1,15 +1,17 @@
 package io.github.pbl32024.model.jobposting;
 
+import lombok.Data;
 
+@Data
 public class JobPostingQuery {
 
-	public String socCode;
+	private String socCode;
 
-	public String userQuery;
+	private String userQuery;
 
-	public long yearlySalaryUpper;
+	private String yearlySalaryUpper;
 
-	public long yearlySalaryLower;
+	private String yearlySalaryLower;
 
 	private JobSource[] jobSource;
 

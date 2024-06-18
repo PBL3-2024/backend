@@ -1,12 +1,15 @@
 package io.github.pbl32024.model.unemployment;
 
 
+import lombok.Data;
+
+@Data
 public class BLSSeriesResponseResultSeriesData {
 
-	public String year;
+	private String year;
 
-	public String period;
+	private String period;
 
-	public String value;
+	private String value;
 
 }

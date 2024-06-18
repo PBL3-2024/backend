@@ -1,17 +1,19 @@
 package io.github.pbl32024.model.contentful.contentfulpublishedrequest;
 
+import lombok.Data;
 
+import java.util.List;
+
+@Data
 public class ContentfulContent {
 
-	public ContentfulContent[] content;
+	private List<ContentfulContent> content;
 
-	public String[] marks;
+	private List<String> marks;
 
-	public String value;
+	private String value;
 
-	public String nodeType;
-
-	private ContentfulContent contentfulContent;
+	private String nodeType;
 
 
 }

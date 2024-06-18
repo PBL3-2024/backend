@@ -1,14 +1,18 @@
 package io.github.pbl32024.model.unemployment;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
+
+@Data
 public class Unemployment {
 
-	public long id;
+	private String id;
 
-	public String socCode;
+	private String socCode;
 
-	public LocalDateTime date;
+	private LocalDateTime date;
 
-	public long value;
+	private long value;
 
 }

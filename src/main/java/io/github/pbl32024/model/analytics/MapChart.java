@@ -1,20 +1,21 @@
 package io.github.pbl32024.model.analytics;
 
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class MapChart extends Chart {
 
-	public String type;
+	private String type;
 
-	public List<Tuple> data;
+	private List<Tuple> data;
 
-	public String region;
+	private String region;
 
-	public int colorAxis;
+	private int colorAxis;
 
-	public String displayMode;
-
-	private Chart chart;
+	private String displayMode;
 
 }

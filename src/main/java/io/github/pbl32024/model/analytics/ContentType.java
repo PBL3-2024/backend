@@ -2,14 +2,12 @@ package io.github.pbl32024.model.analytics;
 
 public enum ContentType {
 
-	;
+	NEWS,
 
-	public int NEWS;
+	CERTIFICATIONS,
 
-	public int CERTIFICATIONS;
+	JOB_POSTING,
 
-	public int JOB_POSTING;
-
-	public int LEARNING_MATERIAL;
+	LEARNING_MATERIAL;
 
 }

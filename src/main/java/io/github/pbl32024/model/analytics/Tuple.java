@@ -1,10 +1,12 @@
 package io.github.pbl32024.model.analytics;
 
+import lombok.Data;
 
+@Data
 public class Tuple {
 
-	public String key;
+	private String key;
 
-	public double value;
+	private double value;
 
 }

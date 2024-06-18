@@ -1,22 +1,24 @@
 package io.github.pbl32024.model.news;
 
 import java.time.LocalDateTime;import io.github.pbl32024.model.ExternalLink;
+import lombok.Data;
 
+@Data
 public class News {
 
-	public String id;
+	private String id;
 
-	public String socCode;
+	private String socCode;
 
-	public String title;
+	private String title;
 
-	public String source;
+	private String source;
 
-	public LocalDateTime published;
+	private LocalDateTime published;
 
-	public String hash;
+	private String hash;
 
-	public String state;
+	private String state;
 
 	private ExternalLink externalLink;
 

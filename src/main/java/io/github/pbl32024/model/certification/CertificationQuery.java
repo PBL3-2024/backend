@@ -1,10 +1,12 @@
 package io.github.pbl32024.model.certification;
 
+import lombok.Data;
 
+@Data
 public class CertificationQuery {
 
-	public String socCode;
+	private String socCode;
 
-	public String organization;
+	private String organization;
 
 }

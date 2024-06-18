@@ -1,7 +1,12 @@
 package io.github.pbl32024.model.jobposting;
 
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class JobPostingResponse {
 
-	private JobPosting[] jobPosting;
+	private List<JobPosting> jobPosting;
 
 }
