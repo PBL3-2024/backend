@@ -26,7 +26,11 @@ public class OccupationTrie {
 	}
 
 	public List<Occupation> getWithPrefix(String prefix) {
-		return List.of();
+		return trie.prefixMap(prefix).values().stream().toList();
+	}
+
+	public List<Occupation> getAll() {
+		return trie.values().stream().toList();
 	}
 
 }

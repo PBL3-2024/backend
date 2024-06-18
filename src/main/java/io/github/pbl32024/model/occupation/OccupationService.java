@@ -12,7 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 @Service
 public class OccupationService {
@@ -30,7 +32,45 @@ public class OccupationService {
 	}
 
 	public List<Occupation> getChildOccupations(String socCode) {
-		return null;
+		if (socCode == null) {
+			return List.of();
+		}
+
+		if ("00-0000".equals(socCode)) {
+			return occupationTrie.getAll().stream()
+					.filter(o -> o.getSocCode().endsWith("0000"))
+					.filter(o -> !o.getSocCode().equals(socCode))
+					.sorted(Comparator.comparing(Occupation::getTitle))
+					.toList();
+		}
+
+		if (socCode.endsWith("0000")) {
+			return occupationTrie.getWithPrefix(socCode.substring(0, 3)).stream()
+					.filter(o -> o.getSocCode().endsWith("00"))
+					.filter(o -> !o.getSocCode().equals(socCode))
+					.sorted(Comparator.comparing(Occupation::getTitle))
+					.toList();
+		}
+
+		if (socCode.endsWith("00")) {
+			return occupationTrie.getWithPrefix(socCode.substring(0, 5)).stream()
+					.filter(o -> o.getSocCode().endsWith("0"))
+					.filter(o -> !o.getSocCode().equals(socCode))
+					.sorted(Comparator.comparing(Occupation::getTitle))
+					.toList();
+		}
+
+		if (socCode.endsWith("0")) {
+			return occupationTrie.getWithPrefix(socCode.substring(0, 6)).stream()
+					.filter(o -> !o.getSocCode().equals(socCode))
+					.sorted(Comparator.comparing(Occupation::getTitle))
+					.toList();
+		}
+
+		return occupationTrie.getWithPrefix(socCode).stream()
+				.sorted(Comparator.comparing(Occupation::getTitle))
+				.filter(o -> !o.getSocCode().equals(socCode))
+				.toList();
 	}
 
 	@PostConstruct
@@ -51,7 +91,7 @@ public class OccupationService {
 	}
 
 	public List<Occupation> getAllOccupations() {
-		return null;
+		return occupationTrie.getAll();
 	}
 
 }

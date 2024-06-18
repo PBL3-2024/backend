@@ -19,8 +19,11 @@ public class OccupationController {
 		return occupationService.getOccupation(socCode);
 	}
 
+	@GetMapping(path = "/children/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public OccupationResponse getChildOccupations(String socCode) {
-		return null;
+		OccupationResponse occupationResponse = new OccupationResponse();
+		occupationResponse.setOccupation(occupationService.getChildOccupations(socCode));
+		return occupationResponse;
 	}
 
 }
