@@ -10,12 +10,12 @@ public class DemandService {
 
 	private final DemandDAO demandDAO;
 
-	public Demand getDemand(String socCode) {
-		return null;
+	public Demand getDemand(DemandQuery query) {
+		return demandDAO.getDemand(query);
 	}
 
-	public Demand setDemand(String socCode, long value) {
-		return null;
+	public Demand setDemand(Demand demand) {
+		return demandDAO.setDemand(demand);
 	}
 
 }
