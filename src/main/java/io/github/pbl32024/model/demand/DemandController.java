@@ -17,12 +17,13 @@ public class DemandController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Demand getDemand(DemandQuery query) {
-		return null;
+		return demandService.getDemand(query);
 	}
 
 	@PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Demand setDemand(@RequestBody Demand demand) {
-		return null;
+		demandService.setDemand(demand);
+		return demand;
 	}
 
 }

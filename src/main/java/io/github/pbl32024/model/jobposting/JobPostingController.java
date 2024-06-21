@@ -17,6 +17,7 @@ public class JobPostingController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public JobPostingResponse getJobPosting(JobPostingQuery query) {
+
 		return null;
 	}
 
