@@ -3,8 +3,10 @@ spring.application.name: server
 backend:
   certifications:
     cron: '1 */5 * * * *'
+  employment:
+    dataset: file:./config/employment/*.csv
   occupation:
-    soc-definitions: classpath:/soc_2018_definitions.csv
+    soc-definitions: file:./config/soc_definitions.csv
   unemployment:
     bls-url: https://api.bls.gov/publicAPI
     cron: '0 0 0 * * *'

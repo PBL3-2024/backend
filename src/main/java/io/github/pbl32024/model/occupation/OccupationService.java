@@ -2,7 +2,6 @@ package io.github.pbl32024.model.occupation;
 
 
 import jakarta.annotation.PostConstruct;
-import lombok.RequiredArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -14,7 +13,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
 
 @Service
 public class OccupationService {
@@ -22,7 +20,7 @@ public class OccupationService {
 	private final OccupationTrie occupationTrie;
 	private final Resource socDefinitions;
 
-	public OccupationService(OccupationTrie occupationTrie, @Value("classpath:soc_2018_definitions.csv") Resource socDefinitions) {
+	public OccupationService(OccupationTrie occupationTrie, @Value("${backend.occupation.soc-definitions}") Resource socDefinitions) {
 		this.occupationTrie = occupationTrie;
 		this.socDefinitions = socDefinitions;
 	}
