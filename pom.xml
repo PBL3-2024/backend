@@ -16,6 +16,27 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas-platform</artifactId>
+				<version>0.3.21-1.5.8</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.21-1.5.8</version>
+				<classifier>macosx-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.21-1.5.8</version>
+				<classifier>linux-arm64</classifier>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,23 +73,35 @@
 		</dependency>
 		<dependency>
 			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-core</artifactId>
+			<artifactId>deeplearning4j-nlp</artifactId>
 			<version>1.0.0-M2.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bytedeco</groupId>
+					<artifactId>opencv</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.bytedeco</groupId>
+					<artifactId>opencv-platform</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-nlp</artifactId>
+			<groupId>org.nd4j</groupId>
+			<artifactId>nd4j-native</artifactId>
 			<version>1.0.0-M2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nd4j</groupId>
-			<artifactId>nd4j-native-platform</artifactId>
+			<artifactId>nd4j-native</artifactId>
 			<version>1.0.0-M2.1</version>
+			<classifier>macosx-arm64</classifier>
 		</dependency>
 		<dependency>
-			<groupId>org.datavec</groupId>
-			<artifactId>datavec-api</artifactId>
+			<groupId>org.nd4j</groupId>
+			<artifactId>nd4j-native</artifactId>
 			<version>1.0.0-M2.1</version>
+			<classifier>linux-arm64</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
