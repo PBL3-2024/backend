@@ -16,4 +16,4 @@ COPY --from=build ${EXTRACTED}/snapshot-dependencies/ ./
 COPY --from=build ${EXTRACTED}/application/ ./
 RUN addgroup --system --gid 1002 app && adduser --system --uid 1002 --gid 1002 appuser
 USER 1002
-ENTRYPOINT ["java","org.springframework.boot.loader.launch.JarLauncher"]
+ENTRYPOINT ["java","-Djava.library.path=./dependencies/BOOT-INF/lib:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib","org.springframework.boot.loader.launch.JarLauncher"]
