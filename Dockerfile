@@ -3,7 +3,7 @@ WORKDIR /workspace/app
 
 COPY . /workspace/app
 
-RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests -P production
+RUN --mount=type=cache,target=/root/.m2 mvn -Djavacpp.platform=linux-x86_64 clean install -DskipTests -P production
 ARG JAR_FILE=target/*.jar
 RUN java -Djarmode=layertools -jar ${JAR_FILE} extract --destination target/extracted
 
