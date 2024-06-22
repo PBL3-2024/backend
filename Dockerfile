@@ -3,7 +3,7 @@ WORKDIR /workspace/app
 
 COPY . /workspace/app
 
-RUN --mount=type=cache,target=/root/.m2 mvn -Djavacpp.platform=linux-arm64 clean install -DskipTests -P production
+RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests -P production
 ARG JAR_FILE=target/*.jar
 RUN java -Djarmode=layertools -jar ${JAR_FILE} extract --destination target/extracted
 
@@ -16,4 +16,4 @@ COPY --from=build ${EXTRACTED}/snapshot-dependencies/ ./
 COPY --from=build ${EXTRACTED}/application/ ./
 RUN addgroup --system --gid 1002 app && adduser --system --uid 1002 --gid 1002 appuser
 USER 1002
-ENTRYPOINT ["java","-Dorg.bytedeco.openblas.load=blas","org.springframework.boot.loader.launch.JarLauncher"]
+ENTRYPOINT ["java","org.springframework.boot.loader.launch.JarLauncher"]
