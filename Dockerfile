@@ -1,4 +1,4 @@
-FROM maven:3.9.6-eclipse-temurin-21 as build
+FROM --platform=linux/arm64 maven:3.9.6-eclipse-temurin-21 as build
 WORKDIR /workspace/app
 
 COPY . /workspace/app
@@ -7,7 +7,7 @@ RUN --mount=type=cache,target=/root/.m2 mvn -Djavacpp.platform=linux-arm64 clean
 ARG JAR_FILE=target/*.jar
 RUN java -Djarmode=layertools -jar ${JAR_FILE} extract --destination target/extracted
 
-FROM eclipse-temurin:21-jdk
+FROM --platform=linux/arm64 eclipse-temurin:21-jdk
 WORKDIR /application
 ARG EXTRACTED=/workspace/app/target/extracted
 COPY --from=build ${EXTRACTED}/dependencies/ ./
