@@ -6,12 +6,52 @@ spring:
       endpoint: https://sgp1.digitaloceanspaces.com
 
 backend:
+  config-location: 'file:./config'
   certifications:
     cron: '1 */5 * * * *'
   employment:
-    dataset: file:./config/employment/*.csv
+    dataset: ${backend.config-location}/employment/*.csv
+  news:
+    model: ${backend.config-location}/news-model
+    stopwords: ${backend.config-location}/stopwords.txt
+    rss:
+      sources:
+        - id: 'ScienceNews'
+          url: 'https://www.sciencenews.org/feed'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/EnergyEnvironment.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/SmallBusiness.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Dealbook.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/MediaandAdvertising.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml'
+        - id: 'New York Times'
+          url: 'https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml'
+        - id: 'DailyMail'
+          url: 'https://www.dailymail.co.uk/health/index.rss'
+        - id: 'DailyMail'
+          url: 'https://www.dailymail.co.uk/sciencetech/index.rss'
+        - id: 'DailyMail'
+          url: 'https://www.dailymail.co.uk/money/index.rss'
+        - id: 'DailyMail'
+          url: 'https://www.dailymail.co.uk/tvshowbiz/index.rss'
   occupation:
-    soc-definitions: file:./config/soc_definitions.csv
+    soc-definitions: ${backend.config-location}/soc_definitions.csv
   unemployment:
     bls-url: https://api.bls.gov/publicAPI
     cron: '0 0 0 * * *'

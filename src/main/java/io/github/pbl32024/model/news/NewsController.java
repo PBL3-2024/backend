@@ -16,7 +16,9 @@ public class NewsController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public NewsResponse getNews(NewsQuery query) {
-		return null;
+		NewsResponse newsResponse = new NewsResponse();
+		newsResponse.setNews(newsService.getNews(query));
+		return newsResponse;
 	}
 
 }
