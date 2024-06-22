@@ -71,21 +71,6 @@
 			<version>1.0.0-M2.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.bytedeco</groupId>
-			<artifactId>openblas</artifactId>
-			<version>0.3.26-1.5.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.bytedeco</groupId>
-			<artifactId>openblas-platform</artifactId>
-			<version>0.3.26-1.5.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.bytedeco</groupId>
-			<artifactId>javacpp</artifactId>
-			<version>1.5.10</version>
-		</dependency>
-		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 		</dependency>
