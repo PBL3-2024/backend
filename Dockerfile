@@ -11,4 +11,4 @@ ARG BUILDDIR=/workspace/app/target
 COPY --from=build ${BUILDDIR}/*.jar ./
 RUN addgroup --system --gid 1002 app && adduser --system --uid 1002 --gid 1002 appuser
 USER 1002
-ENTRYPOINT ["java","-jar","*.jar"]
+ENTRYPOINT ["java","-jar","server-0.0.1-SNAPSHOT.jar"]
