@@ -15,6 +15,4 @@ COPY --from=build ${EXTRACTED}/dependencies/ ./
 COPY --from=build ${EXTRACTED}/spring-boot-loader/ ./
 COPY --from=build ${EXTRACTED}/snapshot-dependencies/ ./
 COPY --from=build ${EXTRACTED}/application/ ./
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-USER appuser
 ENTRYPOINT ["java","org.springframework.boot.loader.launch.JarLauncher"]
