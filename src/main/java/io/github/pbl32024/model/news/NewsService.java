@@ -66,7 +66,7 @@ public class NewsService {
 		return newsDAO.getBySocCode(query.getSocCode());
 	}
 
-	@PostConstruct
+	//@PostConstruct
 	public void fetchRSSFeeds() {
 		try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {
 			for (RSSSource source : rSSProperties.getSources()) {
@@ -101,7 +101,7 @@ public class NewsService {
 		}
 	}
 
-	@Scheduled(fixedRate = 10, timeUnit = TimeUnit.MILLISECONDS)
+	//@Scheduled(fixedRate = 10, timeUnit = TimeUnit.MILLISECONDS)
 	public void classifyNews() {
 		if (!paragraphVectors.isReady()) {
 			return;
