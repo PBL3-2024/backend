@@ -2,6 +2,7 @@ package io.github.pbl32024.model.news;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.paragraphvectors.ParagraphVectors;
@@ -13,12 +14,15 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
@@ -43,6 +47,7 @@ public class LazyParagraphVectors {
 
     @PostConstruct
     public void initialize() {
+        /*
         Thread initThread = new Thread(() -> {
             try {
                 ParagraphVectors paragraphVectors = WordVectorSerializer.readParagraphVectors(model.getInputStream());
@@ -58,8 +63,20 @@ public class LazyParagraphVectors {
                 throw new RuntimeException(e);
             }
         });
-        initThread.setDaemon(true);
-        initThread.start();
+         */
+        File modelFile = new File("news-model");
+        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
+        executor.execute(() -> {
+            try {
+                FileUtils.copyToFile(model.getInputStream(), modelFile);
+                log.info("File downloaded successfully");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        //initThread.setDaemon(true);
+        //initThread.start();
+        log.info("Moving on");
     }
 
     public boolean isReady() {
