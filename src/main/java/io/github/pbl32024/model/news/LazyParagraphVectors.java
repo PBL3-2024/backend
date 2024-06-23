@@ -47,23 +47,23 @@ public class LazyParagraphVectors {
 
     @PostConstruct
     public void initialize() {
-        /*
-        Thread initThread = new Thread(() -> {
-            try {
-                ParagraphVectors paragraphVectors = WordVectorSerializer.readParagraphVectors(model.getInputStream());
-                TokenizerFactory tokenizerFactory = new DefaultTokenizerFactory();
-                tokenizerFactory.setTokenPreProcessor(new CommonPreprocessor());
-                paragraphVectors.setTokenizerFactory(tokenizerFactory);
 
-                vectors.set(paragraphVectors);
-                ready.set(true);
+//        Thread initThread = new Thread(() -> {
+//            try {
+//                ParagraphVectors paragraphVectors = WordVectorSerializer.readParagraphVectors(model.getInputStream());
+//                TokenizerFactory tokenizerFactory = new DefaultTokenizerFactory();
+//                tokenizerFactory.setTokenPreProcessor(new CommonPreprocessor());
+//                paragraphVectors.setTokenizerFactory(tokenizerFactory);
+//
+//                vectors.set(paragraphVectors);
+//                ready.set(true);
+//
+//                log.info("News classifier loaded");
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        });
 
-                log.info("News classifier loaded");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-         */
         File modelFile = new File("news-model");
         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
         executor.execute(() -> {
@@ -74,8 +74,8 @@ public class LazyParagraphVectors {
                 throw new RuntimeException(e);
             }
         });
-        //initThread.setDaemon(true);
-        //initThread.start();
+//        initThread.setDaemon(true);
+//        initThread.start();
         log.info("Moving on");
     }
 

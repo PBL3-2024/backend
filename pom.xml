@@ -16,6 +16,49 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.deeplearning4j</groupId>
+				<artifactId>deeplearning4j-nlp</artifactId>
+				<version>1.0.0-M2.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>ffmpeg</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>ffmpeg-platform</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>hdf5</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>hdf5-platform</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>leptonica</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>leptonica-platform</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>opencv</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.bytedeco</groupId>
+						<artifactId>opencv-platform</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
