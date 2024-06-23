@@ -3,6 +3,7 @@ package io.github.pbl32024.model.unemployment;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class UnemploymentService {
@@ -31,10 +33,19 @@ public class UnemploymentService {
 		blsSeriesRequest.setEndyear(String.valueOf(LocalDate.now().getYear()));
 		blsSeriesRequest.setSeriesid(List.of("LNU04000000"));
 
-		BLSSeriesResponse response = bLSClient.fetchBLSSeries(blsSeriesRequest);
+		BLSSeriesResponse response;
+
+		try {
+			response = bLSClient.fetchBLSSeries(blsSeriesRequest);
+		} catch (Exception e) {
+			log.warn("Error making BLS request", e);
+			response = new BLSSeriesResponse();
+			response.setStatus("ERROR");
+		}
 
 		if (!"REQUEST_SUCCEEDED".equals(response.getStatus())) {
-			throw new RuntimeException("BLS Request for LNU04000000 Failed");
+			log.warn("BLS Request for LUN04000000 Failed");
+			return;
 		}
 
 		List<Unemployment> unemployments = response.getResults().getSeries()
