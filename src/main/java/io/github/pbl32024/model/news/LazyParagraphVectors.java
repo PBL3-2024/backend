@@ -11,6 +11,7 @@ import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFac
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -23,6 +24,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
@@ -48,35 +50,23 @@ public class LazyParagraphVectors {
     @PostConstruct
     public void initialize() {
 
-//        Thread initThread = new Thread(() -> {
-//            try {
-//                ParagraphVectors paragraphVectors = WordVectorSerializer.readParagraphVectors(model.getInputStream());
-//                TokenizerFactory tokenizerFactory = new DefaultTokenizerFactory();
-//                tokenizerFactory.setTokenPreProcessor(new CommonPreprocessor());
-//                paragraphVectors.setTokenizerFactory(tokenizerFactory);
-//
-//                vectors.set(paragraphVectors);
-//                ready.set(true);
-//
-//                log.info("News classifier loaded");
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        });
-
-        File modelFile = new File("news-model");
-        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
-        executor.execute(() -> {
+        Thread initThread = new Thread(() -> {
             try {
-                FileUtils.copyToFile(model.getInputStream(), modelFile);
-                log.info("File downloaded successfully");
+                ParagraphVectors paragraphVectors = InMemoryParagraphVectorDeserializer.deserialize(model.getInputStream());
+                TokenizerFactory tokenizerFactory = new DefaultTokenizerFactory();
+                tokenizerFactory.setTokenPreProcessor(new CommonPreprocessor());
+                paragraphVectors.setTokenizerFactory(tokenizerFactory);
+
+                vectors.set(paragraphVectors);
+                ready.set(true);
+
+                log.info("News classifier loaded");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-//        initThread.setDaemon(true);
-//        initThread.start();
-        log.info("Moving on");
+        initThread.setDaemon(true);
+        initThread.start();
     }
 
     public boolean isReady() {
