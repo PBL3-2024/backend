@@ -24,7 +24,7 @@ public class EmploymentController {
 		List<Employment> employments = new ArrayList<>();
 		Random random = new Random();
 		boolean uptrend = random.nextBoolean();
-		long employment = random.nextInt();
+		long employment = Math.abs(random.nextInt());
 		for (int i = 0; i < 10; i++) {
 			if (uptrend) {
 				employment = (long) (employment * random.nextDouble(0.95, 1.3));
