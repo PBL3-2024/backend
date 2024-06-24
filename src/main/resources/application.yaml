@@ -50,6 +50,1234 @@ backend:
           url: 'https://www.dailymail.co.uk/money/index.rss'
         - id: 'DailyMail'
           url: 'https://www.dailymail.co.uk/tvshowbiz/index.rss'
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/workplace_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pharmaceuticals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cosmetics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/medical_devices.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/bladder_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/copd.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/ebola.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/irritable_bowel_syndrome.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/restless_leg_syndrome.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cerebral_palsy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/influenza.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/swine_flu.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/malaria.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/prostate_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/birth_defects.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/eating_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pneumonia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cervical_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/std.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/back_and_neck_pain.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/encephalitis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vioxx.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/infectious_diseases.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/bladder_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/multiple_myeloma.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cold_and_flu.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/alzheimer's.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pancreatic_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/allergy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/brain_tumor.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/colon_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/epilepsy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/fibromyalgia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/gastrointestinal_problems.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cholesterol.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/mumps,_measles,_rubella.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/obesity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/thyroid_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/triglycerides.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/tuberculosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/breast_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/ovarian_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/insomnia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/hormone_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/joint_pain.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/ulcers.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/colitis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cystic_fibrosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/asthma.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/lung_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/mesothelioma.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/erectile_dysfunction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/lyme_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/multiple_sclerosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/skin_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/mental_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/urology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/lung_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/crohn's_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/parkinson's_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/add_and_adhd.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/stroke.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/down's_syndrome.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/hiv_and_aids.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/hair_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/heart_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/herpes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/anemia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/arthritis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/blood_clots.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/prostate_cancer.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/chronic_fatigue_syndrome.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/bird_flu.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/lupus.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/muscular_dystrophy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/psoriasis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sleep_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/headaches.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/hypertension.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/lymphoma.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/neuropathy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/leukemia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/liver_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sickle_cell_anemia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/amyotrophic_lateral_sclerosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/diabetes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/hearing_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/osteoporosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/kidney_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/heartburn.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/diseases_and_conditions.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/public_health_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/medical_education_and_training.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/patient_education_and_counseling.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/healthy_aging.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/men's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/nutrition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/teen_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pregnancy_and_childbirth.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/caregiving.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/fitness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/women's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/skin_care.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/today's_healthcare.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/breastfeeding.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sports_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sexual_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/fertility.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cosmetic_surgery.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vegetarian.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/staying_healthy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/children's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/infant's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/diet_and_weight_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/foot_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/joint_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/gynecology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/stem_cells.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamins.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/alternative_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/nervous_system.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/illegal_drugs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/epigenetics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/genes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/immune_system.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/chronic_illness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/disability.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/foodborne_illness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pain_control.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamin_e.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/menopause.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/eye_care.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/gene_therapy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/food_additives.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/accident_and_trauma.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/dentistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/folic_acid.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/forensics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/bone_and_spine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/birth_control.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamin_a.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/personalized_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamin_c.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamin_d.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/medical_imaging.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/wounds_and_healing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vitamin_b.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/health_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/human_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pharmacology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/dietary_supplements.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/smoking.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vaccines.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/viruses.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/add_and_adhd.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/alzheimer's.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/dementia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/schizophrenia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/borderline_personality_disorder.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/bipolar_disorder.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/depression.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/huntington's_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/insomnia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/parkinson's.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/stroke.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/headaches.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/multiple_sclerosis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/tinnitus.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/autism.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/hearing_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/epilepsy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/obstructive_sleep_apnea.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/sleep_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/ptsd.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/mad_cow_disease.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/disorders_and_syndromes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/brain_injury.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/dyslexia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/educational_psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/k-12_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/numeracy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/brain-computer_interfaces.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/learning_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/language_acquisition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/music.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/creativity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/infant_and_preschool_learning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/literacy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/intelligence.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/cocaine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/steroids.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/marijuana.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/opium.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/crystal_meth.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/illegal_drugs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/psychedelic_drugs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/ecstasy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/child_development.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/stress.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/consumer_behavior.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/spirituality.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/diet_and_weight_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/nutrition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/behavior.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/caregiving.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/parenting.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/anger_management.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/gender_difference.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/racial_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/relationships.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/mental_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/alcoholism.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/anxiety.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/eating_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/smoking.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/addiction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/memory.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/perception.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/neuroscience.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/psychiatry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/child_psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/social_psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/living_well.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/healthy_aging.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/men's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/nutrition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/teen_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/child_development.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pregnancy_and_childbirth.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/stress.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/caregiving.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/consumer_behavior.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/fitness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/spirituality.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/women's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/skin_care.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/today's_healthcare.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/breastfeeding.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sports_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/sexual_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/diet_and_weight_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/fertility.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cosmetic_surgery.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/vegetarian.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/nutrition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/staying_healthy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/children's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/behavior.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/caregiving.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/infant's_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/parenting.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/anger_management.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/diet_and_weight_loss.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/gender_difference.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/racial_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/relationships.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/black_holes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/stars.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/cosmic_rays.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/nebulae.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/astronomy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/galaxies.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/extrasolar_planets.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/dark_matter.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/big_bang.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/cosmology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/astrophysics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/solar_system.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/kuiper_belt.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/moon.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/neptune.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/asteroids,_comets_and_meteors.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/venus.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/saturn.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/mars.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/mercury.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/northern_lights.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/sun.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/uranus.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/jupiter.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/solar_flare.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/pluto.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/xena.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/space_missions.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/space_station.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/space_telescopes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/esa.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/nasa.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/space_exploration.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/satellites.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/space_time/space_probes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/textiles_and_clothing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/engineering_and_construction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/energy_and_resources.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/telecommunications.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/automotive_and_transportation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/aerospace.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/consumer_electronics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/biochemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/inorganic_chemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/organic_chemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/chemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/thermodynamics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/electricity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/petroleum.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/energy_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/wind_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/batteries.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/nuclear_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/fuel_cells.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/energy_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/alternative_fuels.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/fossil_fuels.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/solar_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/sports_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/virtual_reality.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/weapons_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/civil_engineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/forensics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/microarrays.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/construction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/wearable_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/aviation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/detectors.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/spintronics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/medical_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/biometric.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/graphene.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/robotics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/nanotechnology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/3-d_printing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/electronics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/vehicles.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/engineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/materials_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/transportation_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/albert_einstein.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/quantum_physics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/nature_of_water.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/quantum_computing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/ultrasound.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/acoustics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/nature_of_light.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/physics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/markets_and_finance.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computers_and_internet.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computational_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computer_graphics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computer_modeling.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computer_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/encryption.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/mobile_computing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/video_games.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/virtual_reality.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/distributed_computing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computer_programming.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/quantum_computers.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/spintronics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/wifi.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/information_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/robotics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/hacking.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/internet.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/software.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/communications.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/photography.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/neural_interfaces.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/educational_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/math_puzzles.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/mathematical_modeling.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/mathematics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/statistics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/fisheries.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/genetically_modified.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/pests_and_parasites.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/cloning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/drought.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/beer_and_wine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/soil_types.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/bird_flu.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/agriculture_and_food.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/seeds.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/food.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/organic.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/cows,_sheep,_pigs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/rodents.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/veterinary_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/dogs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/mice.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/cats.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/horses.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/spiders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/birds.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/frogs_and_reptiles.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/apes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/monkeys.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/new_species.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/fish.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/insects_and_butterflies.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/dolphins_and_whales.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/animals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/mammals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/biotechnology_and_bioengineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/food_and_agriculture.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/extinction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/trees.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/wild_animals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/endangered_plants.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/endangered_animals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/extreme_survival.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/nature.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/sea_life.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/ecology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/invasive_species.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/animal_learning_and_intelligence.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/mating_and_breeding.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/developmental_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/zoology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/life_sciences.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/behavior.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/biochemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/biotechnology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/cell_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/genetics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/evolution.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/epigenetics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/molecular_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/marine_biology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/botany.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/microbes_and_more.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/microbiology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/viruses.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/bacteria.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/fungus.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/prions.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/renewable_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/geoengineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/recycling_and_waste.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/mining.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/geography.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/climate.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/earth_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/weather.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/chemistry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/atmosphere.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/geology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/oceanography.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/environmental_awareness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/drought.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/air_pollution.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/environmental_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/ice_ages.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/oil_spills.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/acid_rain.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/global_warming.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/ozone_holes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/pollution.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/hazardous_waste.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/air_quality.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/environmental_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/sustainability.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/desert.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/ecology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/water.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/coral_reefs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/rainforests.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/wildfires.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/caving.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/ecosystems.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/environmental_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/biodiversity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/tundra.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/invasive_species.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/forests.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/grasslands.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/storms.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/natural_disasters.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/floods.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/volcanoes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/snow_and_avalanches.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/tsunamis.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/geomagnetic_storms.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/landslides.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/earthquakes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/hurricanes_and_cyclones.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/tornadoes.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/near-earth_object_impacts.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/el_nino_and_la_nina.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/severe_weather.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/anthropology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/cultures.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/early_humans.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/lost_treasures.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/archaeology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/ancient_civilizations.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/ancient_dna.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/human_evolution.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/origin_of_life.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/charles_darwin.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/evolution.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/early_birds.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/dinosaurs.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/paleontology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/early_climate.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/early_mammals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/tyrannosaurus_rex.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/fossils_ruins/fossils.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/media_and_entertainment.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/retail_and_services.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/industrial_relations.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/security_and_defense.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/travel_and_recreation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/religion.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/sports.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/arts_and_culture.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/education_and_employment.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/stem_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/poverty_and_learning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/educational_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/energy_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/ocean_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/scientific_conduct.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/space_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/government_regulation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/public_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/privacy_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/environmental_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/funding_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/surveillance.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/transportation_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/resource_shortage.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/urbanization.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/racial_disparity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/world_development.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/conflict.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/bioethics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/economics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/ethics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/disaster_plan.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/justice.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/social_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/consumerism.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/legal_issues.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/political_science.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/popular_culture.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/land_management.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/business_industry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/workplace_health.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/pharmaceuticals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/cosmetics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/medical_devices.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/markets_and_finance.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/textiles_and_clothing.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/engineering_and_construction.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/energy_and_resources.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/telecommunications.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/automotive_and_transportation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/computers_and_internet.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/aerospace.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/matter_energy/consumer_electronics.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/biotechnology_and_bioengineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/food_and_agriculture.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/renewable_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/geoengineering.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/recycling_and_waste.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/mining.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/media_and_entertainment.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/retail_and_services.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/industrial_relations.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/security_and_defense.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/travel_and_recreation.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/education_learning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/dyslexia.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/educational_psychology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/k-12_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/numeracy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/public_health_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/medical_education_and_training.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/brain-computer_interfaces.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/learning_disorders.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/language_acquisition.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/music.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/health_medicine/patient_education_and_counseling.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/creativity.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/infant_and_preschool_learning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/literacy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/mind_brain/intelligence.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/neural_interfaces.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/computers_math/educational_technology.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/earth_climate/environmental_awareness.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/plants_animals/animal_learning_and_intelligence.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/education_and_employment.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/stem_education.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/poverty_and_learning.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/science_society/educational_policy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/health_medicine.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/mind_brain.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/living_well.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/space_time.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/matter_energy.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/computers_math.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/plants_animals.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/earth_climate.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/fossils_ruins.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/science_society.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/business_industry.xml"
+        - id: 'ScienceDaily'
+          url: "https://www.sciencedaily.com/rss/strange_offbeat/education_learning.xml"
   occupation:
     soc-definitions: ${backend.config-location}/soc_definitions.csv
   unemployment:
