@@ -9,7 +9,7 @@
     </changeSet>
 
     <changeSet id="2" author="grabowj">
-        <createTable tableName="external_links">
+        <createTable schemaName="public" tableName="external_links">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -23,17 +23,23 @@
     </changeSet>
 
     <changeSet id="3" author="grabowj">
-        <createTable tableName="news">
+        <createTable schemaName="public" tableName="news">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="title" type="text">
                 <constraints nullable="false"/>
             </column>
+            <column name="description" type="text">
+                <constraints nullable="false"/>
+            </column>
             <column name="published" type="timestamp with time zone">
                 <constraints nullable="false"/>
             </column>
             <column name="source" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="text">
                 <constraints nullable="false"/>
             </column>
             <column name="external_link_id" type="text">
@@ -43,7 +49,7 @@
     </changeSet>
 
     <changeSet id="4" author="grabowj">
-        <createTable tableName="news_soc_codes">
+        <createTable schemaName="public" tableName="news_soc_codes">
             <column name="news_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_news_soc_codes_news" referencedTableName="news" referencedColumnNames="id"/>
             </column>
@@ -51,10 +57,18 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <createTable schemaName="public" tableName="news_categories">
+            <column name="news_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_soc_codes_news" referencedTableName="news" referencedColumnNames="id"/>
+            </column>
+            <column name="category" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
     </changeSet>
 
     <changeSet id="5" author="grabowj">
-        <createTable tableName="certifications">
+        <createTable schemaName="public" tableName="certifications">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -65,7 +79,7 @@
     </changeSet>
 
     <changeSet id="6" author="grabowj">
-        <createTable tableName="certifications_soc_codes">
+        <createTable schemaName="public" tableName="certifications_soc_codes">
             <column name="certification_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_certifications_soc_codes" referencedTableName="certifications" referencedColumnNames="id"/>
             </column>
@@ -76,7 +90,7 @@
     </changeSet>
 
     <changeSet id="7" author="grabowj">
-        <createTable tableName="certifications_external_links">
+        <createTable schemaName="public" tableName="certifications_external_links">
             <column name="certification_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_certifications_external_links" referencedTableName="certifications" referencedColumnNames="id"/>
             </column>
@@ -87,7 +101,7 @@
     </changeSet>
 
     <changeSet id="8" author="grabowj">
-        <createTable tableName="learning_material">
+        <createTable schemaName="public" tableName="learning_material">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -101,7 +115,7 @@
     </changeSet>
 
     <changeSet id="9" author="grabowj">
-        <createTable tableName="learning_material_soc_codes">
+        <createTable schemaName="public" tableName="learning_material_soc_codes">
             <column name="learning_material_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_learning_material_soc_codes" referencedTableName="learning_material" referencedColumnNames="id"/>
             </column>
@@ -112,7 +126,7 @@
     </changeSet>
 
     <changeSet id="10" author="grabowj">
-        <createTable tableName="learning_material_external_links">
+        <createTable schemaName="public" tableName="learning_material_external_links">
             <column name="learning_material_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_learning_material_external_links" referencedTableName="learning_material" referencedColumnNames="id"/>
             </column>
@@ -123,7 +137,7 @@
     </changeSet>
 
     <changeSet id="11" author="grabowj">
-        <createTable tableName="unemployment">
+        <createTable schemaName="public" tableName="unemployment">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -138,7 +152,7 @@
     </changeSet>
 
     <changeSet id="12" author="grabowj">
-        <createTable tableName="profile">
+        <createTable schemaName="public" tableName="profile">
             <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -152,7 +166,7 @@
     </changeSet>
 
     <changeSet id="13" author="grabowj">
-        <createTable tableName="click_data">
+        <createTable schemaName="public" tableName="click_data">
             <column name="timestamp" type="timestamp with time zone">
                 <constraints nullable="false"/>
             </column>
@@ -170,7 +184,7 @@
     </changeSet>
 
     <changeSet id="14" author="grabowj">
-        <sql>SELECT create_hypertable('click_data', 'timestamp');</sql>
+        <sql>SELECT create_hypertable('public.click_data', 'timestamp');</sql>
     </changeSet>
 
 </databaseChangeLog>
