@@ -4,6 +4,9 @@ spring:
   cloud:
     aws:
       endpoint: https://sgp1.digitaloceanspaces.com
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.xml
 
 backend:
   config-location: 'file:./config'
