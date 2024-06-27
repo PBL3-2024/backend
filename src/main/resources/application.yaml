@@ -55,3 +55,8 @@ backend:
   unemployment:
     bls-url: https://api.bls.gov/publicAPI
     cron: '0 0 0 * * *'
+  usajobs:
+    api:
+      url: https://data.usajobs.gov
+      key: placeholder
+      email: placeholder
