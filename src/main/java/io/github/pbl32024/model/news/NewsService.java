@@ -4,19 +4,10 @@ import io.github.pbl32024.model.ExternalLink;
 import io.github.pbl32024.model.occupation.Occupation;
 import io.github.pbl32024.model.occupation.OccupationService;
 import jakarta.annotation.PostConstruct;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ObjectUtils;
-import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
-import org.deeplearning4j.models.paragraphvectors.ParagraphVectors;
-import org.deeplearning4j.text.documentiterator.LabelAwareIterator;
-import org.deeplearning4j.text.documentiterator.SimpleLabelAwareIterator;
-import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.CommonPreprocessor;
-import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
-import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -24,11 +15,12 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -66,7 +58,7 @@ public class NewsService {
 		return newsDAO.getBySocCode(query.getSocCode());
 	}
 
-	@PostConstruct
+	@EventListener(ApplicationStartedEvent.class)
 	public void fetchRSSFeeds() {
 		try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {
 			for (RSSSource source : rSSProperties.getSources()) {
@@ -87,12 +79,14 @@ public class NewsService {
 						news.setPublished(DateTimeFormatter.RFC_1123_DATE_TIME.parse(article.getPubDate(), LocalDateTime::from));
 						news.setState(STATE_NEW);
 						ExternalLink externalLink = new ExternalLink();
+						externalLink.setId(UUID.randomUUID().toString());
 						externalLink.setLabel("Click here to read");
 						externalLink.setUrl(article.getLink());
 						news.setExternalLink(externalLink);
 						news.setTitle(article.getTitle());
 						news.setDescription(article.getDescription());
-						news.setCategories(article.getCategory());
+						news.setCategories(new HashSet<>(article.getCategory()));
+						news.setSocCode(Set.of());
 						newsList.add(news);
 					}
 					newsDAO.save(newsList);
@@ -120,25 +114,27 @@ public class NewsService {
 				.filter(Objects::nonNull)
 				.collect(Collectors.joining(" "));
 
-		Set<String> socMappings = paragraphVectors.classify(input, 1).entrySet().stream()
+		Set<String> socMappings = paragraphVectors.classify(input, 10).entrySet().stream()
 				.filter(entry -> entry.getValue() >= THRESHOLD)
 				.map(Map.Entry::getKey)
 				.collect(Collectors.toSet());
 
+		news.setSocCode(socMappings);
+
 		if (socMappings.isEmpty()) {
 			news.setState(STATE_UNCLASSIFIED);
 		} else {
-			socMappings.stream().findFirst().ifPresent(news::setSocCode);
 			news.setState(STATE_CLASSIFIED);
 		}
 
 		newsDAO.save(List.of(news));
 
-		String occupation = Optional.ofNullable(occupationService.getOccupation(news.getSocCode()))
-				.map(Occupation::getTitle)
-				.orElse(news.getSocCode());
+		Set<String> occupations = news.getSocCode().stream()
+			.map(occupationService::getOccupation)
+			.map(Occupation::getTitle)
+			.collect(Collectors.toSet());
 
-		log.info("Classified news article {} - {}, state={}, occupation={}", news.getId(), news.getTitle(), news.getState(), occupation);
+		log.info("Classified news article {} - {}, state={}, occupation={}", news.getId(), news.getTitle(), news.getState(), occupations);
 	}
 
 
