@@ -144,7 +144,7 @@
             <column name="soc" type="text">
                 <constraints nullable="false"/>
             </column>
-            <column name="date" type="date">
+            <column name="date" type="timestamp with time zone">
                 <constraints nullable="false"/>
             </column>
             <column name="value" type="decimal"/>
