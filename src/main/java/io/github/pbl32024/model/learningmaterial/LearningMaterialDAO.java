@@ -48,7 +48,8 @@ public class LearningMaterialDAO {
 				LEFT JOIN
 				    external_links el ON lmel.external_link_id = el.id
 				WHERE
-				    lmsc.soc LIKE CONCAT(:soc, '%');
+				    lmsc.soc LIKE CONCAT(:soc, '%')
+				ORDER BY lm.id ASC;
 				""", Map.of("soc", SOCSupport.trimSoc(socCode)), rch);
 		return new ArrayList<>(rch.getLearningMaterials());
 	}

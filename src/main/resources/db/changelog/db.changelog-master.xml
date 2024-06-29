@@ -75,6 +75,9 @@
             <column name="title" type="text"/>
             <column name="description" type="text"/>
             <column name="source" type="text"/>
+            <column name="external_link_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_external_links" referencedTableName="external_links" referencedColumnNames="id"/>
+            </column>
         </createTable>
     </changeSet>
 
@@ -85,17 +88,6 @@
             </column>
             <column name="soc" type="text">
                 <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-
-    <changeSet id="7" author="grabowj">
-        <createTable schemaName="public" tableName="certifications_external_links">
-            <column name="certification_id" type="text">
-                <constraints nullable="false" foreignKeyName="fk_certifications_external_links" referencedTableName="certifications" referencedColumnNames="id"/>
-            </column>
-            <column name="external_link_id" type="text">
-                <constraints nullable="false" foreignKeyName="fk_certifications_external_links_external_links" referencedTableName="external_links" referencedColumnNames="id"/>
             </column>
         </createTable>
     </changeSet>
@@ -194,6 +186,112 @@
             </column>
             <column name="value" type="bigint"/>
         </createTable>
+    </changeSet>
+
+    <changeSet id="16" author="grabowj">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS careeronestop;
+        </sql>
+    </changeSet>
+
+    <changeSet id="17" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERT_ORGS">
+            <column name="ORG_ID" type="CHAR(4)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ORG_NAME" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORG_ADDRES" type="TEXT"/>
+            <column name="ORG_PHONE1" type="TEXT"/>
+            <column name="EXT" type="TEXT"/>
+            <column name="ORG_PHONE2" type="TEXT"/>
+            <column name="ORG_FAX" type="TEXT"/>
+            <column name="ORG_EMAIL" type="TEXT"/>
+            <column name="ORG_WEBPAG" type="TEXT"/>
+            <column name="ACRONYM" type="TEXT"/>
+            <column name="ORG_LAST_UPDATE" type="DATE"/>
+            <column name="SUPPRESS" type="TEXT"/>
+            <column name="DATEADDED" type="DATE" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="VERIFIED" type="TEXT"/>
+            <column name="UPDATEDBY" type="TEXT"/>
+            <column name="DELETED" type="DECIMAL(1)" defaultValueNumeric="0"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="18" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERTIFICATIONS">
+            <column name="CERT_ID" type="TEXT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CERT_NAME" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORG_ID" type="CHAR(4)"/>
+            <column name="TRAINING" type="DECIMAL(1)"/>
+            <column name="EXPERIENCE" type="DECIMAL(1)"/>
+            <column name="EITHER" type="DECIMAL(1)"/>
+            <column name="EXAM" type="DECIMAL(1)"/>
+            <column name="RENEWAL" type="CHAR(2)"/>
+            <column name="CEU" type="DECIMAL(1)"/>
+            <column name="REEXAM" type="DECIMAL(1)"/>
+            <column name="CPD" type="DECIMAL(1)"/>
+            <column name="CERT_ANY" type="DECIMAL(1)"/>
+            <column name="URL" type="TEXT"/>
+            <column name="ACRONYM" type="TEXT"/>
+            <column name="NSSB_URL" type="TEXT"/>
+            <column name="CERT_URL" type="TEXT"/>
+            <column name="CERT_LAST_UPDATE" type="DATE"/>
+            <column name="KEYWORD1" type="TEXT"/>
+            <column name="KEYWORD2" type="TEXT"/>
+            <column name="KEYWORD3" type="TEXT"/>
+            <column name="SUPPRESS" type="TEXT"/>
+            <column name="DATEADDED" type="DATE" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="COMMENTS" type="TEXT"/>
+            <column name="VERIFIED" type="TEXT"/>
+            <column name="UPDATEDBY" type="TEXT"/>
+            <column name="CERT_DESCRIPTION" type="TEXT"/>
+            <column name="DELETED" type="DECIMAL(1)" defaultValueNumeric="0"/>
+            <column name="EXAM_DETAILS" type="TEXT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableSchemaName="careeronestop"
+                                 baseTableName="CERTIFICATIONS"
+                                 baseColumnNames="ORG_ID"
+                                 constraintName="CERTIFICATIONS_ORG_ID_FK"
+                                 referencedTableSchemaName="careeronestop"
+                                 referencedTableName="CERT_ORGS"
+                                 referencedColumnNames="ORG_ID"/>
+    </changeSet>
+
+    <changeSet id="19" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERT_ONET_ASSIGN">
+            <column name="ID" type="DECIMAL(7)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CERT_ID" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ONETCODE" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACTIVE_YN" type="CHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RELATION" type="CHAR(1)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableSchemaName="careeronestop"
+                                 baseTableName="CERT_ONET_ASSIGN"
+                                 baseColumnNames="CERT_ID"
+                                 constraintName="CERT_ONET_ASSIGN_CERT_FK"
+                                 referencedTableSchemaName="careeronestop"
+                                 referencedTableName="CERTIFICATIONS"
+                                 referencedColumnNames="CERT_ID"/>
+    </changeSet>
+
+    <changeSet id="20" author="grabowj">
+        <sqlFile path="careeronestop_export.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
 </databaseChangeLog>

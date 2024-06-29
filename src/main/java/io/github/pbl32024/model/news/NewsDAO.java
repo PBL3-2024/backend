@@ -47,6 +47,7 @@ public class NewsDAO {
                      LEFT JOIN news_soc_codes ns ON n.id = ns.news_id 
                      LEFT JOIN news_categories nc ON n.id = nc.news_id 
                      WHERE ns.soc LIKE CONCAT(:soc, '%')
+					 ORDER BY n.published DESC;
                      """, Map.of("soc", SOCSupport.trimSoc(socCode)), rch);
 		return new ArrayList<>(rch.getNews());
 	}

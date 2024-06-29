@@ -17,7 +17,9 @@ public class CertificationController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public CertificationResponse getCertifications(CertificationQuery query) {
-		return null;
+		CertificationResponse response = new CertificationResponse();
+		response.setCertifications(certificationService.getCertifications(query));
+		return response;
 	}
 
 }
