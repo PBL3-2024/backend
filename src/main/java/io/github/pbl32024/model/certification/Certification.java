@@ -4,20 +4,21 @@ import io.github.pbl32024.model.ExternalLink;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class Certification {
 
 	private String id;
 
-	private List<String> socCode;
+	private Set<String> socCode;
 
 	private String title;
 
 	private String description;
 
-	private String organization;
+	private String source;
 
-	private List<ExternalLink> externalLinks;
+	private ExternalLink externalLink;
 
 }

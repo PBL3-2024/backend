@@ -1,0 +1,297 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="grabowj">
+        <sql>CREATE EXTENSION IF NOT EXISTS timescaledb;</sql>
+    </changeSet>
+
+    <changeSet id="2" author="grabowj">
+        <createTable schemaName="public" tableName="external_links">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="label" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="url" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3" author="grabowj">
+        <createTable schemaName="public" tableName="news">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="published" type="timestamp with time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="external_link_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_external_links" referencedTableName="external_links" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4" author="grabowj">
+        <createTable schemaName="public" tableName="news_soc_codes">
+            <column name="news_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_soc_codes_news" referencedTableName="news" referencedColumnNames="id"/>
+            </column>
+            <column name="soc" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable schemaName="public" tableName="news_categories">
+            <column name="news_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_soc_codes_news" referencedTableName="news" referencedColumnNames="id"/>
+            </column>
+            <column name="category" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="5" author="grabowj">
+        <createTable schemaName="public" tableName="certifications">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="text"/>
+            <column name="description" type="text"/>
+            <column name="source" type="text"/>
+            <column name="external_link_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_news_external_links" referencedTableName="external_links" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="6" author="grabowj">
+        <createTable schemaName="public" tableName="certifications_soc_codes">
+            <column name="certification_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_certifications_soc_codes" referencedTableName="certifications" referencedColumnNames="id"/>
+            </column>
+            <column name="soc" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="8" author="grabowj">
+        <createTable schemaName="public" tableName="learning_material">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="text"/>
+            <column name="source" type="text"/>
+            <column name="type" type="text"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="9" author="grabowj">
+        <createTable schemaName="public" tableName="learning_material_soc_codes">
+            <column name="learning_material_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_learning_material_soc_codes" referencedTableName="learning_material" referencedColumnNames="id"/>
+            </column>
+            <column name="soc" type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="10" author="grabowj">
+        <createTable schemaName="public" tableName="learning_material_external_links">
+            <column name="learning_material_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_learning_material_external_links_learning_material" referencedTableName="learning_material" referencedColumnNames="id"/>
+            </column>
+            <column name="external_link_id" type="text">
+                <constraints nullable="false" foreignKeyName="fk_learning_material_external_links_external_links" referencedTableName="external_links" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="11" author="grabowj">
+        <createTable schemaName="public" tableName="unemployment">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="soc" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="timestamp with time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="decimal"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="12" author="grabowj">
+        <createTable schemaName="public" tableName="profile">
+            <column name="id" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="text"/>
+            <column name="email" type="text"/>
+            <column name="postal_code" type="text"/>
+            <column name="current_soc" type="text"/>
+            <column name="goal_soc" type="text"/>
+            <column name="tos_consent" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="13" author="grabowj">
+        <createTable schemaName="public" tableName="click_data">
+            <column name="timestamp" type="timestamp with time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="element_id" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="element_type" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="text"/>
+            <column name="user_postal_code" type="text"/>
+            <column name="user_current_soc" type="text"/>
+            <column name="user_goal_soc" type="text"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="14" author="grabowj">
+        <sql>SELECT create_hypertable('public.click_data', 'timestamp');</sql>
+    </changeSet>
+
+    <changeSet id="15" author="grabowj">
+        <createTable schemaName="public" tableName="demand">
+            <column name="soc" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="value" type="bigint"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="16" author="grabowj">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS careeronestop;
+        </sql>
+    </changeSet>
+
+    <changeSet id="17" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERT_ORGS">
+            <column name="ORG_ID" type="CHAR(4)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ORG_NAME" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORG_ADDRES" type="TEXT"/>
+            <column name="ORG_PHONE1" type="TEXT"/>
+            <column name="EXT" type="TEXT"/>
+            <column name="ORG_PHONE2" type="TEXT"/>
+            <column name="ORG_FAX" type="TEXT"/>
+            <column name="ORG_EMAIL" type="TEXT"/>
+            <column name="ORG_WEBPAG" type="TEXT"/>
+            <column name="ACRONYM" type="TEXT"/>
+            <column name="ORG_LAST_UPDATE" type="DATE"/>
+            <column name="SUPPRESS" type="TEXT"/>
+            <column name="DATEADDED" type="DATE" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="VERIFIED" type="TEXT"/>
+            <column name="UPDATEDBY" type="TEXT"/>
+            <column name="DELETED" type="DECIMAL(1)" defaultValueNumeric="0"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="18" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERTIFICATIONS">
+            <column name="CERT_ID" type="TEXT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CERT_NAME" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORG_ID" type="CHAR(4)"/>
+            <column name="TRAINING" type="DECIMAL(1)"/>
+            <column name="EXPERIENCE" type="DECIMAL(1)"/>
+            <column name="EITHER" type="DECIMAL(1)"/>
+            <column name="EXAM" type="DECIMAL(1)"/>
+            <column name="RENEWAL" type="CHAR(2)"/>
+            <column name="CEU" type="DECIMAL(1)"/>
+            <column name="REEXAM" type="DECIMAL(1)"/>
+            <column name="CPD" type="DECIMAL(1)"/>
+            <column name="CERT_ANY" type="DECIMAL(1)"/>
+            <column name="URL" type="TEXT"/>
+            <column name="ACRONYM" type="TEXT"/>
+            <column name="NSSB_URL" type="TEXT"/>
+            <column name="CERT_URL" type="TEXT"/>
+            <column name="CERT_LAST_UPDATE" type="DATE"/>
+            <column name="KEYWORD1" type="TEXT"/>
+            <column name="KEYWORD2" type="TEXT"/>
+            <column name="KEYWORD3" type="TEXT"/>
+            <column name="SUPPRESS" type="TEXT"/>
+            <column name="DATEADDED" type="DATE" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="COMMENTS" type="TEXT"/>
+            <column name="VERIFIED" type="TEXT"/>
+            <column name="UPDATEDBY" type="TEXT"/>
+            <column name="CERT_DESCRIPTION" type="TEXT"/>
+            <column name="DELETED" type="DECIMAL(1)" defaultValueNumeric="0"/>
+            <column name="EXAM_DETAILS" type="TEXT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableSchemaName="careeronestop"
+                                 baseTableName="CERTIFICATIONS"
+                                 baseColumnNames="ORG_ID"
+                                 constraintName="CERTIFICATIONS_ORG_ID_FK"
+                                 referencedTableSchemaName="careeronestop"
+                                 referencedTableName="CERT_ORGS"
+                                 referencedColumnNames="ORG_ID"/>
+    </changeSet>
+
+    <changeSet id="19" author="grabowj">
+        <createTable schemaName="careeronestop" tableName="CERT_ONET_ASSIGN">
+            <column name="ID" type="DECIMAL(7)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CERT_ID" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ONETCODE" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACTIVE_YN" type="CHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RELATION" type="CHAR(1)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableSchemaName="careeronestop"
+                                 baseTableName="CERT_ONET_ASSIGN"
+                                 baseColumnNames="CERT_ID"
+                                 constraintName="CERT_ONET_ASSIGN_CERT_FK"
+                                 referencedTableSchemaName="careeronestop"
+                                 referencedTableName="CERTIFICATIONS"
+                                 referencedColumnNames="CERT_ID"/>
+    </changeSet>
+
+    <changeSet id="20" author="grabowj">
+        <sqlFile path="careeronestop_export.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+</databaseChangeLog>

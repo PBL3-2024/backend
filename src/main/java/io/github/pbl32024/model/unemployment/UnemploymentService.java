@@ -1,9 +1,13 @@
 package io.github.pbl32024.model.unemployment;
 
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +29,7 @@ public class UnemploymentService {
 		return unemploymentDAO.getUnemploymentBySocCode(socCode);
 	}
 
-	@PostConstruct
+	@EventListener(ApplicationStartedEvent.class)
 	@Scheduled(cron = "${backend.unemployment.cron}")
 	public void loadUnemploymentData() {
 		BLSSeriesRequest blsSeriesRequest = new BLSSeriesRequest();
@@ -36,7 +40,69 @@ public class UnemploymentService {
 		BLSSeriesResponse response;
 
 		try {
-			response = bLSClient.fetchBLSSeries(blsSeriesRequest);
+			response = new ObjectMapper().disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES).readValue("""
+					{
+					  "status": "REQUEST_SUCCEEDED",
+					  "responseTime": 126,
+					  "message": [],
+					  "Results": {
+					    "series": [
+					      {
+					        "seriesID": "LNU04000000",
+					        "data": [
+					          {
+					            "year": "2024",
+					            "period": "M05",
+					            "periodName": "May",
+					            "latest": "true",
+					            "value": "3.7",
+					            "footnotes": [
+					              {}
+					            ]
+					          },
+					          {
+					            "year": "2024",
+					            "period": "M04",
+					            "periodName": "April",
+					            "value": "3.5",
+					            "footnotes": [
+					              {}
+					            ]
+					          },
+					          {
+					            "year": "2024",
+					            "period": "M03",
+					            "periodName": "March",
+					            "value": "3.9",
+					            "footnotes": [
+					              {}
+					            ]
+					          },
+					          {
+					            "year": "2024",
+					            "period": "M02",
+					            "periodName": "February",
+					            "value": "4.2",
+					            "footnotes": [
+					              {}
+					            ]
+					          },
+					          {
+					            "year": "2024",
+					            "period": "M01",
+					            "periodName": "January",
+					            "value": "4.1",
+					            "footnotes": [
+					              {}
+					            ]
+					          }
+					        ]
+					      }
+					    ]
+					  }
+					}
+					""", BLSSeriesResponse.class);
+			//response = bLSClient.fetchBLSSeries(blsSeriesRequest);
 		} catch (Exception e) {
 			log.warn("Error making BLS request", e);
 			response = new BLSSeriesResponse();
@@ -55,7 +121,7 @@ public class UnemploymentService {
 					Unemployment unemployment = new Unemployment();
 					unemployment.setId(data.getYear() + "-" + data.getPeriod());
 					unemployment.setDate(LocalDateTime.parse(data.getYear() + "-" + data.getPeriod().substring(1) + "-01T00:00:00"));
-					unemployment.setValue(data.getValue());
+					unemployment.setValue(Double.parseDouble(data.getValue()));
 					unemployment.setSocCode("00-0000");
 					return unemployment;
 				})

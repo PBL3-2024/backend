@@ -16,7 +16,7 @@ import java.io.OutputStream;
 @RequestMapping("/analytics")
 public class AnalyticsController {
 
-	private AnalyticsService analyticsService;
+	private final AnalyticsService analyticsService;
 
 	@GetMapping(path = "/currentOccupation", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getUserCurrentOccupationReport(AnalyticsQuery query) {
@@ -53,9 +53,9 @@ public class AnalyticsController {
 
 	}
 
-	@PostMapping(path = "/certificationEngagement", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void saveClickData(@RequestBody ClickData query) {
-
+	@PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public void saveClickData(@RequestBody ClickData data) {
+		analyticsService.saveClickData(data);
 	}
 
 }

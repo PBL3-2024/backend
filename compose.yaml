@@ -1,1 +1,11 @@
-services: {}
+services:
+  database:
+    image: 'timescale/timescaledb:latest-pg16'
+    ports:
+      - '5432'
+    environment:
+      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_DB=mydatabase'
+      - 'POSTGRES_PASSWORD=secret'
+    labels:
+      org.springframework.boot.service-connection: postgres
