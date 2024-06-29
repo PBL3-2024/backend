@@ -187,4 +187,13 @@
         <sql>SELECT create_hypertable('public.click_data', 'timestamp');</sql>
     </changeSet>
 
+    <changeSet id="15" author="grabowj">
+        <createTable schemaName="public" tableName="demand">
+            <column name="soc" type="text">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="value" type="bigint"/>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog>
