@@ -2,6 +2,7 @@
   <configuration default="false" name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <envs>
       <env name="AWS_REGION" value="undefined" />
+      <env name="BACKEND_CONTENTFUL_PASSWORD" value="{noop}password" />
     </envs>
     <module name="server" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.pbl32024.ServerApplication" />

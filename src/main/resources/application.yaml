@@ -8,10 +8,14 @@ spring:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.xml
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+
 backend:
   config-location: 'file:./config'
-  certifications:
-    cron: '1 */5 * * * *'
+  contentful:
+    password: placeholder
   employment:
     dataset: ${backend.config-location}/employment/*.csv
   news:
