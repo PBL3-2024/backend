@@ -4,6 +4,7 @@ import io.github.pbl32024.model.ExternalLink;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class LearningMaterial {
@@ -14,12 +15,12 @@ public class LearningMaterial {
 
 	private String description;
 
-	private List<String> socCode;
+	private Set<String> socCode;
 
-	private String organization;
+	private String source;
 
-	private LearningContentType learningContentType;
+	private LearningContentType type;
 
-	private List<ExternalLink> externalLink;
+	private Set<ExternalLink> externalLink;
 
 }

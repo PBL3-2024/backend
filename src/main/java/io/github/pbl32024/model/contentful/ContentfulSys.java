@@ -1,4 +1,4 @@
-package io.github.pbl32024.model.contentful.contentfulunpublishedrequest;
+package io.github.pbl32024.model.contentful;
 
 import lombok.Data;
 

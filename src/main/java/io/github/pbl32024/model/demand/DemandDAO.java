@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,6 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DemandDAO {
 	private final NamedParameterJdbcTemplate jdbcTemplate;
 
+	@Transactional(readOnly = true)
 	public Demand getDemand(DemandQuery query) {
 		Long demand = jdbcTemplate.queryForObject("""
 				SELECT SUM(value) AS total_value
@@ -28,6 +30,7 @@ public class DemandDAO {
 		return result;
 	}
 
+	@Transactional
 	public Demand setDemand(Demand demand) {
 		MapSqlParameterSource parameterSource = new MapSqlParameterSource();
 		parameterSource.addValue("soc", demand.getSocCode());

@@ -128,7 +128,7 @@
     <changeSet id="10" author="grabowj">
         <createTable schemaName="public" tableName="learning_material_external_links">
             <column name="learning_material_id" type="text">
-                <constraints nullable="false" foreignKeyName="fk_learning_material_external_links" referencedTableName="learning_material" referencedColumnNames="id"/>
+                <constraints nullable="false" foreignKeyName="fk_learning_material_external_links_learning_material" referencedTableName="learning_material" referencedColumnNames="id"/>
             </column>
             <column name="external_link_id" type="text">
                 <constraints nullable="false" foreignKeyName="fk_learning_material_external_links_external_links" referencedTableName="external_links" referencedColumnNames="id"/>

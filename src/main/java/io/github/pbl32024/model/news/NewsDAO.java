@@ -51,18 +51,20 @@ public class NewsDAO {
 		return new ArrayList<>(rch.getNews());
 	}
 
-	@Transactional
+	@Transactional(readOnly = true)
 	public News getNewNews() {
 		NewsRowCallbackHandler rch = new NewsRowCallbackHandler();
 		jdbcTemplate.query("""
+                     WITH single_news AS (
+    					SELECT * FROM news WHERE news.state = :state LIMIT 1
+					)					
                      SELECT n.id, n.title, n.description, n.source, n.published, n.state, n.external_link_id, 
                             el.label AS external_link_label, el.url AS external_link_url, 
                             ns.soc, nc.category 
-                     FROM news n 
+                     FROM single_news n 
                      LEFT JOIN external_links el ON n.external_link_id = el.id 
                      LEFT JOIN news_soc_codes ns ON n.id = ns.news_id 
-                     LEFT JOIN news_categories nc ON n.id = nc.news_id 
-                     WHERE n.state = :state
+                     LEFT JOIN news_categories nc ON n.id = nc.news_id;
                      """, Map.of("state", "NEW"), rch);
 		return rch.getNews().stream().findFirst().orElse(null);
 	}
