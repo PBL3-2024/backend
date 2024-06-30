@@ -294,4 +294,20 @@
         <sqlFile path="careeronestop_export.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
+    <changeSet id="21" author="grabowj">
+        <sql>
+            CREATE INDEX news_published_id ON news(published, id);
+            CREATE INDEX news_categories_id ON news_categories(news_id);
+            CREATE INDEX news_soc_codes_id ON news_soc_codes(news_id);
+            CREATE INDEX news_soc_codes_soc ON news_soc_codes(soc text_pattern_ops);
+            CREATE INDEX unemployment_soc ON unemployment(soc);
+            CREATE INDEX unemployment_soc_text ON unemployment(soc text_pattern_ops);
+            CREATE INDEX learning_material_external_links_id ON learning_material_external_links(learning_material_id);
+            CREATE INDEX learning_material_soc_codes_id ON learning_material_soc_codes(learning_material_id);
+            CREATE INDEX learning_material_soc_codes_soc ON learning_material_soc_codes(soc text_pattern_ops);
+            CREATE INDEX certifications_soc_codes_id ON certifications_soc_codes(certification_id);
+            CREATE INDEX certifications_soc_codes_soc ON certifications_soc_codes(soc text_pattern_ops);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>

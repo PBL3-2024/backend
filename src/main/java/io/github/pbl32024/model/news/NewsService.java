@@ -58,6 +58,7 @@ public class NewsService {
 		return newsDAO.getBySocCode(query.getSocCode());
 	}
 
+	@Scheduled(cron = "${backend.news.cron}")
 	@EventListener(ApplicationStartedEvent.class)
 	public void fetchRSSFeeds() {
 		try (ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor()) {

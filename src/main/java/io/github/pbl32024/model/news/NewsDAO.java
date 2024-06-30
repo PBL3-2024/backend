@@ -42,7 +42,15 @@ public class NewsDAO {
                      SELECT n.id, n.title, n.description, n.source, n.published, n.state, n.external_link_id, 
                             el.label AS external_link_label, el.url AS external_link_url, 
                             ns.soc, nc.category 
-                     FROM news n 
+                     FROM (
+               			SELECT DISTINCT ON (published, id) 
+         			    	id, title, description, source, published, state, external_link_id
+         				FROM news
+   						LEFT JOIN news_soc_codes ON news_soc_codes.news_id = news.id
+   						WHERE news_soc_codes.soc LIKE CONCAT(:soc, '%')
+						ORDER BY news.published, news.id DESC
+						LIMIT 10
+         			 ) n
                      LEFT JOIN external_links el ON n.external_link_id = el.id 
                      LEFT JOIN news_soc_codes ns ON n.id = ns.news_id 
                      LEFT JOIN news_categories nc ON n.id = nc.news_id 
