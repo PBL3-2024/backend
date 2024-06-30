@@ -40,69 +40,7 @@ public class UnemploymentService {
 		BLSSeriesResponse response;
 
 		try {
-			response = new ObjectMapper().disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES).readValue("""
-					{
-					  "status": "REQUEST_SUCCEEDED",
-					  "responseTime": 126,
-					  "message": [],
-					  "Results": {
-					    "series": [
-					      {
-					        "seriesID": "LNU04000000",
-					        "data": [
-					          {
-					            "year": "2024",
-					            "period": "M05",
-					            "periodName": "May",
-					            "latest": "true",
-					            "value": "3.7",
-					            "footnotes": [
-					              {}
-					            ]
-					          },
-					          {
-					            "year": "2024",
-					            "period": "M04",
-					            "periodName": "April",
-					            "value": "3.5",
-					            "footnotes": [
-					              {}
-					            ]
-					          },
-					          {
-					            "year": "2024",
-					            "period": "M03",
-					            "periodName": "March",
-					            "value": "3.9",
-					            "footnotes": [
-					              {}
-					            ]
-					          },
-					          {
-					            "year": "2024",
-					            "period": "M02",
-					            "periodName": "February",
-					            "value": "4.2",
-					            "footnotes": [
-					              {}
-					            ]
-					          },
-					          {
-					            "year": "2024",
-					            "period": "M01",
-					            "periodName": "January",
-					            "value": "4.1",
-					            "footnotes": [
-					              {}
-					            ]
-					          }
-					        ]
-					      }
-					    ]
-					  }
-					}
-					""", BLSSeriesResponse.class);
-			//response = bLSClient.fetchBLSSeries(blsSeriesRequest);
+			response = bLSClient.fetchBLSSeries(blsSeriesRequest);
 		} catch (Exception e) {
 			log.warn("Error making BLS request", e);
 			response = new BLSSeriesResponse();

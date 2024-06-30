@@ -21,6 +21,7 @@ backend:
   news:
     model: ${backend.config-location}/news-model
     stopwords: ${backend.config-location}/stopwords.txt
+    cron: '0 0 0 * * *'
     rss:
       sources:
         - id: 'ScienceNews'
