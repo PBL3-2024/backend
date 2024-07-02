@@ -21,9 +21,15 @@ public class EmploymentController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public EmploymentResponse getEmploymentBySocCode(String socCode) {
-		EmploymentResponse response = new EmploymentResponse();
-		response.setEmployment(employmentService.getEmploymentBySocCode(socCode));
-		return response;
+		try {
+			EmploymentResponse response = new EmploymentResponse();
+			response.setEmployment(employmentService.getEmploymentBySocCode(socCode));
+			return response;
+		} catch (Exception e) {
+			EmploymentResponse response = new EmploymentResponse();
+			response.setEmployment(List.of());
+			return response;
+		}
 	}
 
 }
