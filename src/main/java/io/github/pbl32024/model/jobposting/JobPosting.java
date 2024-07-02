@@ -3,6 +3,8 @@ package io.github.pbl32024.model.jobposting;
 import io.github.pbl32024.model.ExternalLink;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class JobPosting {
 
@@ -20,7 +22,7 @@ public class JobPosting {
 
 	private String deadline;
 
-	private ExternalLink externalLink;
+	private List<ExternalLink> externalLink;
 
 	private JobSource jobSource;
 
