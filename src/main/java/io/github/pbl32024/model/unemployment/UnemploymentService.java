@@ -1,9 +1,13 @@
 package io.github.pbl32024.model.unemployment;
 
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +29,7 @@ public class UnemploymentService {
 		return unemploymentDAO.getUnemploymentBySocCode(socCode);
 	}
 
-	@PostConstruct
+	@EventListener(ApplicationStartedEvent.class)
 	@Scheduled(cron = "${backend.unemployment.cron}")
 	public void loadUnemploymentData() {
 		BLSSeriesRequest blsSeriesRequest = new BLSSeriesRequest();
@@ -55,7 +59,7 @@ public class UnemploymentService {
 					Unemployment unemployment = new Unemployment();
 					unemployment.setId(data.getYear() + "-" + data.getPeriod());
 					unemployment.setDate(LocalDateTime.parse(data.getYear() + "-" + data.getPeriod().substring(1) + "-01T00:00:00"));
-					unemployment.setValue(data.getValue());
+					unemployment.setValue(Double.parseDouble(data.getValue()));
 					unemployment.setSocCode("00-0000");
 					return unemployment;
 				})

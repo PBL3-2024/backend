@@ -2,8 +2,9 @@
   <configuration default="false" name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <envs>
       <env name="AWS_REGION" value="undefined" />
-      <env name="BACKEND_USAJOBS_API_KEY" value="ZjVbpbtC50jnBWcp1+2ObM7bDePV5bkDJuX1Sm1tqd4=" />
-      <env name="BACKEND_USAJOBS_API_EMAIL" value="andifallihmalela@gmail.com" />
+      <env name="BACKEND_USAJOBS_API_KEY" value="placeholder" />
+      <env name="BACKEND_USAJOBS_API_EMAIL" value="placeholder@gmail.com" />
+      <env name="BACKEND_CONTENTFUL_PASSWORD" value="{noop}password" />
     </envs>
     <module name="server" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.pbl32024.ServerApplication" />

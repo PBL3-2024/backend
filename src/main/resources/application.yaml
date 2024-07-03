@@ -4,16 +4,24 @@ spring:
   cloud:
     aws:
       endpoint: https://sgp1.digitaloceanspaces.com
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+
+logging:
+  level:
+    org.springframework.security: DEBUG
 
 backend:
   config-location: 'file:./config'
-  certifications:
-    cron: '1 */5 * * * *'
+  contentful:
+    password: placeholder
   employment:
     dataset: ${backend.config-location}/employment/*.csv
   news:
     model: ${backend.config-location}/news-model
     stopwords: ${backend.config-location}/stopwords.txt
+    cron: '0 0 0 * * *'
     rss:
       sources:
         - id: 'ScienceNews'

@@ -16,7 +16,9 @@ public class LearningMaterialController {
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	public LearningMaterialResponse getLearningMaterial(LearningMaterialQuery query) {
-		return null;
+		LearningMaterialResponse response = new LearningMaterialResponse();
+		response.setLearningMaterial(learningMaterialService.getLearningMaterial(query));
+		return response;
 	}
 
 }

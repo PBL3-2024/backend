@@ -9,7 +9,7 @@ public class ClickData {
 
 	private String elementId;
 
-	private String elementType;
+	private ContentType elementType;
 
 	private String userId;
 
