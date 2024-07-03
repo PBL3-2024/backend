@@ -9,7 +9,6 @@ import org.springframework.web.service.annotation.PostExchange;
 
 @HttpExchange(accept = MediaType.APPLICATION_JSON_VALUE, contentType = MediaType.APPLICATION_JSON_VALUE)
 public interface BLSClient {
-
 	@PostExchange(url = "/v1/timeseries/data/")
 	BLSSeriesResponse fetchBLSSeries(@RequestBody BLSSeriesRequest query);
 

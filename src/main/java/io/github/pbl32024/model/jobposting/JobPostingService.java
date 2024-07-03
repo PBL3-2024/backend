@@ -15,9 +15,7 @@ public class JobPostingService {
 	private final OccupationService occupationService;
 
 	public List<JobPosting> getJobPosting(JobPostingQuery query) {
-
-
-		return null;
+		return jobPostingClient.fetchJobPosting(occupationService.getOccupation(query.getSocCode()),query);
 	}
 
 }

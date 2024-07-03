@@ -1,14 +1,18 @@
 package io.github.pbl32024.model.jobposting.usajobs;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
+@JsonNaming(PropertyNamingStrategy.PascalCaseStrategy.class)
 public class MatchedObjectDescriptor {
 
-	private String positionId;
+	private String positionID;
 
 	private String positionTitle;
 
@@ -24,12 +28,16 @@ public class MatchedObjectDescriptor {
 
 	private LocalDateTime publicationEndDate;
 
-	private String positionUrl;
+	private LocalDateTime ApplicationCloseDate;
+
+	private String positionURI;
+
+	private List<String> applyURI;
 
 	private List<PositionLocation> positionLocation;
 
 	private UserArea userArea;
 
-	private List<PositionRenumeration> positionRenumeration;
+	private List<PositionRenumeration> positionRemuneration;
 
 }
