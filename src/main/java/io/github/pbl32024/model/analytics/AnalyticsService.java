@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 /*
  * This is probably overkill for our expected load, but it should make this very low latency
@@ -46,11 +47,21 @@ public class AnalyticsService {
 	}
 
 	public Report getUserCurrentOccupationReport(AnalyticsQuery query) {
-		return null;
+		List<Chart> charts = new ArrayList<>();
+		charts.add(analyticsDAO.getUserCurrentOccupationMapChart(query));
+
+		Report report = new Report();
+		report.setCharts(charts);
+		return report;
 	}
 
 	public Report getUserGoalOccupationReport(AnalyticsQuery query) {
-		return null;
+		List<Chart> charts = new ArrayList<>();
+		charts.add(analyticsDAO.getUserGoalOccupationMapChart(query));
+
+		Report report = new Report();
+		report.setCharts(charts);
+		return report;
 	}
 
 	public Report getJobPostingEngagement(AnalyticsQuery query) {
@@ -58,15 +69,30 @@ public class AnalyticsService {
 	}
 
 	public Report getNewsEngagement(AnalyticsQuery query) {
-		return null;
+		List<Chart> charts = new ArrayList<>();
+		charts.add(analyticsDAO.getNewsEngagementMapChart(query));
+
+		Report report = new Report();
+		report.setCharts(charts);
+		return report;
 	}
 
 	public Report getCertificationEngagement(AnalyticsQuery query) {
-		return null;
+		List<Chart> charts = new ArrayList<>();
+		charts.add(analyticsDAO.getCertificationEngagementMapChart(query));
+
+		Report report = new Report();
+		report.setCharts(charts);
+		return report;
 	}
 
 	public Report getLearningMaterialEngagement(AnalyticsQuery query) {
-		return null;
+		List<Chart> charts = new ArrayList<>();
+		charts.add(analyticsDAO.getLearningMaterialEngagementMapChart(query));
+
+		Report report = new Report();
+		report.setCharts(charts);
+		return report;
 	}
 
 	public void getClickData(ClickDataQuery query, OutputStream body) {

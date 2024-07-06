@@ -20,12 +20,12 @@ public class AnalyticsController {
 
 	@GetMapping(path = "/currentOccupation", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getUserCurrentOccupationReport(AnalyticsQuery query) {
-		return null;
+		return analyticsService.getUserCurrentOccupationReport(query);
 	}
 
 	@GetMapping(path = "/goalOccupation", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getUserGoalOccupationReport(AnalyticsQuery query) {
-		return null;
+		return analyticsService.getUserGoalOccupationReport(query);
 	}
 
 	@GetMapping(path = "/jobPostingEngagement", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -35,17 +35,17 @@ public class AnalyticsController {
 
 	@GetMapping(path = "/newsEngagement", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getNewsEngagement(AnalyticsQuery query) {
-		return null;
+		return analyticsService.getNewsEngagement(query);
 	}
 
 	@GetMapping(path = "/certificationEngagement", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getCertificationEngagement(AnalyticsQuery query) {
-		return null;
+		return analyticsService.getCertificationEngagement(query);
 	}
 
 	@GetMapping(path = "/learningMaterialEngagement", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Report getLearningMaterialEngagement(AnalyticsQuery query) {
-		return null;
+		return analyticsService.getLearningMaterialEngagement(query);
 	}
 
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)

@@ -12,10 +12,4 @@ public class MapChart extends Chart {
 
 	private List<Tuple> data;
 
-	private String region;
-
-	private int colorAxis;
-
-	private String displayMode;
-
 }
