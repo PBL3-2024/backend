@@ -7,6 +7,13 @@ spring:
   liquibase:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.xml
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-2rwfim8h3qzkydvj.us.auth0.com/
+          audiences:
+            - 'https://shark-app-k86o4.ondigitalocean.app'
 
 logging:
   level:
