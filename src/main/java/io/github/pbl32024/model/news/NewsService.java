@@ -115,7 +115,7 @@ public class NewsService {
 				.filter(Objects::nonNull)
 				.collect(Collectors.joining(" "));
 
-		Set<String> socMappings = paragraphVectors.classify(input, 10).entrySet().stream()
+		Set<String> socMappings = paragraphVectors.classify(input, 3).entrySet().stream()
 				.filter(entry -> entry.getValue() >= THRESHOLD)
 				.map(Map.Entry::getKey)
 				.collect(Collectors.toSet());
