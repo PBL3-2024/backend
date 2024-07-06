@@ -310,4 +310,13 @@
         </sql>
     </changeSet>
 
+    <changeSet id="22" author="grabowj">
+        <sql>
+            CREATE INDEX click_data_user_current_soc ON click_data(user_current_soc text_pattern_ops);
+            CREATE INDEX click_data_user_goal_soc ON click_data(user_goal_soc text_pattern_ops);
+            CREATE INDEX profile_current_soc ON profile(current_soc text_pattern_ops);
+            CREATE INDEX profile_goal_soc ON profile(goal_soc text_pattern_ops);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>

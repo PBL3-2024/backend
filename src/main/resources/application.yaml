@@ -21,6 +21,8 @@ logging:
 
 backend:
   config-location: 'file:./config'
+  analytics:
+    postal-codes: ${backend.config-location}/uszips.csv
   contentful:
     password: placeholder
   employment:
